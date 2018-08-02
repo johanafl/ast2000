@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.7.31)  2 AUG 2018 11:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.7.31)  2 AUG 2018 18:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1325,47 +1325,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--115
 
 [2
 
-] [3] [4] [5]
-Overfull \hbox (17.0406pt too wide) detected at line 302
-[]
- []
-
-[6pdfTeX warning (ext4): destination with the same identifier (name{table.1}) h
-as been already used, duplicate ignored
+] [3] [4] [5] [6] [7] [8pdfTeX warning (ext4): destination with the same identi
+fier (name{table.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.302 \end{align*}
-                  ]
-Overfull \hbox (64.23106pt too wide) detected at line 342
+l.376 
+      ]
+Overfull \hbox (3.52373pt too wide) detected at line 387
 []
  []
 
-[7] [8] [9] [10] [11]
-Overfull \hbox (29.9849pt too wide) detected at line 566
+
+Overfull \hbox (43.67319pt too wide) detected at line 400
 []
  []
 
-[12] [13] [14] [15pdfTeX warning (ext4): destination with the same identifier (
-name{figure.1}) has been already used, duplicate ignored
+[9] [10] [11] [12] [13] [14]
+Overfull \hbox (29.9849pt too wide) detected at line 627
+[]
+ []
+
+[15] [16] [17pdfTeX warning (ext4): destination with the same identifier (name{
+figure.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.685 \end{document}
+l.746 \end{document}
                     ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 685.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 685.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 746.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 746.
  (./part2c.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 685.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 685.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 746.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 746.
 Package rerunfilecheck Info: File `part2c.out' has not changed.
 (rerunfilecheck)             Checksum: AE6694AE8B56A3CF14DE1E613FF37B67;444.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 685.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 746.
  ) 
 Here is how much of TeX's memory you used:
- 21491 strings out of 494880
- 397429 string characters out of 6179601
- 509668 words of memory out of 5000000
+ 21493 strings out of 494880
+ 397443 string characters out of 6179601
+ 511668 words of memory out of 5000000
  24321 multiletter control sequences out of 15000+600000
  12457 words of font info for 48 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
@@ -1384,10 +1384,10 @@ cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.
 pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/sha
 re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on part2c.pdf (15 pages, 217977 bytes).
+Output written on part2c.pdf (17 pages, 227258 bytes).
 PDF statistics:
- 292 PDF objects out of 1000 (max. 8388607)
- 257 compressed objects within 3 object streams
- 96 named destinations out of 1000 (max. 500000)
+ 302 PDF objects out of 1000 (max. 8388607)
+ 265 compressed objects within 3 object streams
+ 98 named destinations out of 1000 (max. 500000)
  85 words of extra memory for PDF output out of 10000 (max. 10000000)
 

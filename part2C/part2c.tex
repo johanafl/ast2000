@@ -166,65 +166,88 @@ where $L$ is the angular momentum, $m$ is the mass of the object, $r$ is the Sch
 \section*{Exercise 2C.1}
 
 
-We are observing a laser with frequency $\nu_{\text{shell}}=1/\Delta t_\text{shell}$, measured by a shell observer at a distance $r$ from a central mass, and $\nu^{\prime}=1/\Delta t^{\prime}$, measured by a far-away observer (when the laser reaches him). $\Delta t^{\prime}$ and $\Delta t_\text{shell}$ are the difference between two peaks of the electromagnetic wave of the laser.
+We are observing a laser with frequency $\nu_{\text{shell}}=1/\Delta t_\text{shell}$, measured by a shell observer at a distance $r$ from a central mass $M$, and $\nu^{\prime}=1/\Delta t^{\prime}$, measured by a far-away observer (when the laser reaches him). $\Delta t^{\prime}$ and $\Delta t_\text{shell}$ are the difference between two peaks of the electromagnetic wave of the laser.
 
 \begin{enumerate}
 
-\item We want to find the relation between the two time differences. In lecture note 2C we derived a relation between the time measured by a shell and far-away observer (equation \ref{eq:shell_time}).
+\item We want to find the relation between the two time differences. In lecture note 2C we derived a relation between the time measured by a shell and far-away observer (equation \ref{eq:shell_time}). We derived this equation assuming $\Delta r=0$, $\Delta\phi=0$ and that the shell observer was in a local inertial frame so that $\Delta s^{2}=\Delta\tau^{2}=\Delta t_{\text{shell}}$. 
 %, which is valid for $\Delta r_{shell}\approx0$ and $\Delta \phi_\text{shell}=0$. 
-Since the distance between two peaks on an electromagnetic wave is very small (if we exclude radio waves), we are allowed to use equation \ref{eq:shell_time} which gives us \[\Delta t^{\prime}=\frac{\Delta t_{\text{shell}}}{\sqrt{1-\frac{2M}{r}}}\]
+Since the distance between two peaks on an electromagnetic wave is very small (if we exclude radio waves), the wave is only moving in radial direction and we can think of an observer \textquote{on} the wave as a shell observer in a local inertial frame, we are allowed to use equation \ref{eq:shell_time} which gives us 
 
-\item We can now show the gravitational ``Doppler" formula. We know that the relation between wave length and frequency is $\lambda=\frac{c}{\nu}=\frac{1}{\nu}$, since $c=1$ in relativistic units. Thus we get
+\[\Delta t^{\prime}=\frac{\Delta t_{\text{shell}}}{\sqrt{1-\frac{2M}{r}}}\]
+
+\item We should now be able to show the gravitational ``Doppler" formula. We know that the relation between wave length and frequency is $\lambda=\frac{c}{\nu}=\frac{1}{\nu}$, since $c=1$ in our relativistic units (where $\lambda$ and $\nu$ is the wave length and frequency of an electromagnetic wave). Using that frequency is given by $\nu=\frac{1}{\Delta t}$, we get (remember that want to find an expression for $\frac{\Delta \lambda}{\lambda}$)
 
 \begin{align*}
-\frac{\Delta \lambda}{\lambda_{\text{shell}}}&=\frac{\lambda^{\prime}-\lambda_{\text{shell}}}{\lambda_{\text{shell}}}=\frac{1/\nu^{\prime}}{1/\nu_{\text{shell}}}-1\\
+\frac{\Delta \lambda}{\lambda_{\text{shell}}}&=\frac{\lambda^{\prime}-\lambda_{\text{shell}}}{\lambda_{\text{shell}}}=\frac{\lambda^{\prime}}{\lambda_{\text{shell}}}-1=\frac{1/\nu^{\prime}}{1/\nu_{\text{shell}}}-1\\
 &=\frac{\Delta t^{\prime}}{\Delta t_{\text{shell}}}-1=\frac{\Delta t_{\text{shell}}}{\sqrt{1-\frac{2M}{r}}}\frac{1}{\Delta t_{\text{shell}}}-1\\
 &=\frac{1}{\sqrt{1-\frac{2M}{r}}}-1
 \end{align*}
+
+In the second line we use the relation we found above (equation\ref{eq:shell_time}).
   
-\item $x=\frac{2M}{r}$, $f(x)=\frac{1}{\sqrt{1-x}}$
+\item To show the relation $\frac{\Delta \lambda}{\lambda_{\text{shell}}}=\frac{M}{r}$ when $r\gg2M$, we will create a Taylor expansion. We define $f(x)=\frac{1}{\sqrt{1-x}}$. In other words, if we choose $x=\frac{2M}{r}$ we have
+
+\[\frac{\Delta \lambda}{\lambda_{\text{shell}}}=\frac{1}{\sqrt{1-\frac{2M}{r}}}-1=f(x)-1\]
+
+We start by finding the derivative.
 
 \begin{align*}
-f^{\prime}(x)&=\left[(1-x)^{-1/2}\right]^{\prime}=\frac{-1}{2}(1-x)^{-3/2}(-1)=\frac{1}{2}(1-x)^{-3/2} &&\Rightarrow&& f^{\prime}(0)&=\frac{1}{2}\\
-f^{\prime\prime}(x)&=\frac{1}{2}\left[(1-x)^{-3/2}\right]^{\prime}=\frac{1}{2}\frac{-3}{2}(1-x)^{-5/2}(-1)=\frac{3}{4}(1-x)^{-5/2} &&\Rightarrow&& f^{\prime\prime}(0)&=\frac{3}{4}
+f^{\prime}(x)&=\left[(1-x)^{-1/2}\right]^{\prime}=\frac{-1}{2}(1-x)^{-3/2}(-1)=\frac{1}{2}(1-x)^{-3/2} &&\Rightarrow&& f^{\prime}(0)&=\frac{1}{2}
 \end{align*}  
 
+This means that we can write the first order Taylor expasion for $f(x)$ (this will be a good approximation for $r\gg 2M$.
+
 \begin{equation*}
-\frac{1}{\sqrt{1-x}}=f(x)\approx T_{2}f(x)=f(0)+xf^{\prime}(0)=1+\frac{1}{2}x
+\frac{1}{\sqrt{1-x}}=f(x)\approx T_{1}f(x)=f(0)+xf^{\prime}(0)=1+\frac{1}{2}x
 \end{equation*}
 
+Inserting our newfound Taylor expansion into the relativistic \textquote{Doppler} formula we find
+
 \begin{align*}
-\frac{\Delta \lambda}{\lambda_{\text{shell}}}&=\frac{1}{\sqrt{1-\frac{2M}{r}}}-1\approx T_{2}f(2M/r)-1=f(0)+\frac{2M}{r}f^{\prime}(0)-1=1+\frac{1}{2}\frac{2M}{r}-1\\
+\frac{\Delta \lambda}{\lambda_{\text{shell}}}&=\frac{1}{\sqrt{1-\frac{2M}{r}}}-1\approx T_{1}f(2M/r)-1=f(0)+\frac{2M}{r}f^{\prime}(0)-1=1+\frac{1}{2}\frac{2M}{r}-1\\
 &=\frac{M}{r}
 \end{align*}
 
 
-\item $\lambda_{\text{max}}=500\,nm$.
+\item We will now study how the relativistic doppler formula acts on the light from the sun. We will assume that the wave length of the light from the sun is at maximum $\lambda_{\text{max}}=500\,nm$.
 
 \begin{enumerate}
 
-\item Equation \ref{eq:kg_to_m} \[M_{m}=\frac{G}{c^{2}}M_{kg}=7.4259\cdot10^{-28}\,m/kg\cdot2\cdot10^{30}\,kg\approx1485.18\,m\]
+\item First we need to find the mass of our sun in meters. Equation \ref{eq:kg_to_m} tells us how to converte from kilos to meters.
 
-\item The radius of the sun is $r_{\text{sun}}=695\,508\,km$. \[\frac{M}{r}\approx\frac{1485.18\,m}{695\,508\cdot10^{3}\,m}\approx2.1354\cdot10^{-6}\]
+\[M_{m}=\frac{G}{c^{2}}M_{kg}=7.4259\cdot10^{-28}\,m/kg\cdot2\cdot10^{30}\,kg\approx1485.18\,m\]
 
-\item Since $\frac{2M}{r}\ll 1$ we are allowed to use our Taylor expansion $\frac{\Delta \lambda}{\lambda}=\frac{M}{r}\approx2.1354\cdot10^{-6}$.
+\item we can now find the ratio $M/r$ for the sun (the radius of the sun is listed under constants). 
+
+\[\frac{M}{r}\approx\frac{1485.18\,m}{695\,508\cdot10^{3}\,m}\approx2.1354\cdot10^{-6}\]
+
+\item We now want to find the redshift measured by a far-away observer. Since $\frac{2M}{r}\ll 1$ we are allowed to use our Taylor expansion $\frac{\Delta \lambda}{\lambda}=\frac{M}{r}\approx2.1354\cdot10^{-6}$.
 \\
-Alternatively:
+Alternatively we can use the full expression:
 \begin{equation*}
 \frac{\Delta \lambda}{\lambda}=\frac{1}{\sqrt{1-\frac{2M}{r}}}-1\approx\frac{1}{\sqrt{1-2\cdot2.1354\cdot10^{-6}}}-1\approx2.1354\cdot10^{-6}
 \end{equation*}
   
-\item
+\item The color of the sun observed by a far-away observer will be
 
 \begin{align*}
 \frac{\Delta \lambda}{\lambda}&=\frac{\lambda^{\prime}-\lambda_{\text{shell}}}{\lambda_{\text{shell}}}=\frac{1}{\sqrt{1-\frac{2M}{r}}}-1\\
 \frac{\lambda^{\prime}}{\lambda_{\text{shell}}}&=\frac{1}{\sqrt{1-\frac{2M}{r}}}\\
 \lambda^{\prime}&=\frac{1}{\sqrt{1-\frac{2M}{r}}}\lambda_{\text{shell}}\approx\frac{1}{\sqrt{1-2\cdot2.1354\cdot10^{-6}}}\cdot500\cdot10^{-9}\,m\approx500.001\,nm
 \end{align*}
+
+The apparent color of the sun will therefore not change.
   
-\item The mass and radius of the earth are $M_{\text{Earth}}=5.972\cdot10^{24}$ and $r_{\text{Earth}}=6\,371\cdot10^{3}\,m$, giving $M_{m,\text{Earth}}=\frac{G}{c^{2}}M_{kg,\text{Earth}}\approx7.4259\cdot10^{-28}\,m/kg\cdot5.972\cdot10^{24}\,kg\approx4.4347\cdot10^{-3}\,m$, hence \[\frac{M}{r}\approx\frac{4.4347\cdot10^{-3}\,m}{6\,371\cdot10^{3}\,m}\approx6.9608\cdot10^{-10}\]
+\item We now want to study how light from a sun-like star is affected by the Earth's gravitational pull (the mass and radius of the Earth are listed under constants). We begin by finding Earth's mass in meters 
+
+\[M_{m,\text{Earth}}=\frac{G}{c^{2}}M_{kg,\text{Earth}}\approx7.4259\cdot10^{-28}\,m/kg\cdot5.972\cdot10^{24}\,kg\approx4.4347\cdot10^{-3}\,m,\]
+
+hence the mass to radius ratio becomes
+
+\[\frac{M}{r}\approx\frac{4.4347\cdot10^{-3}\,m}{6\,371\cdot10^{3}\,m}\approx6.9608\cdot10^{-10}\]
   
-\item Since the light is approaching the earth, we need to reverse the doppler formula.
+\item We are now almost ready to find the Doppler shift caused by the Earth. Notice that we need to redefine who the far-away and shell observer is (the observer on Earth will be the shell observer and the one close to the sun will be the far-away observer). To be consistent, we will therefore switch the places in the Doppler formula (the ratio between the two wave lengths will be the same even if we do not switch the places).
 
 \begin{align*}
 \frac{\Delta \lambda}{\lambda^{\prime}}&=\frac{\lambda_{\text{shell}}-\lambda^{\prime}}{\lambda^{\prime}}=\frac{\Delta t_{\text{shell}}}{\Delta t^{\prime}}-1\\
@@ -242,7 +265,7 @@ Thus the observed wave length on earth is
   
 \end{enumerate}
 
-\item 
+\item We are now looking at waves observed from a quasar and we want to find the distance $r$ in terms of $M$. The shell observer will be the observer close to the quasar and the far-away observer will be us on Earth. We are given $\lambda^{\prime}=600\,nm$ and $\lambda_{\text{shell}}=2150\,nm$. Rearranging the the relativistic Doppler formula and putting in numbers, we find:
 
 \begin{align*}
 \frac{\Delta \lambda}{\lambda_{\text{shell}}}&=\frac{\lambda^{\prime}}{\lambda_{\text{shell}}}-1=\frac{1}{\sqrt{1-\frac{2M}{r}}}-1\\
@@ -252,12 +275,16 @@ r&=\frac{2M}{1-\left(\frac{\lambda_{\text{shell}}}{\lambda^{\prime}}\right)^{2}}
 r&=\frac{2}{1-\left(\frac{600\,nm}{2150\,nm}\right)^{2}}M\approx2.1689M
 \end{align*}
 
-\item 
+We know from lecture note 2C that the Schwarzschild radius of a black hole is located at $r=2M$. Since the light we measure is is emitted at a distance $r\approx2M$, it would make sence that there is a black hole at the center of the quasar (light closer to the black hole then $r=2M$ will just fall into it).
+
+\item We are now situated at $r=2.01M$ as a shell observer around a black hole with mass $M$. We want to find the Doppler shift from the stars around us. The Doppler formula gives us
 
 \begin{align*}
 \frac{\Delta \lambda}{\lambda^{\prime}}&=\frac{\lambda_{\text{shell}}}{\lambda^{\prime}}-1=\sqrt{1-\frac{2M}{r}}-1\\
 \lambda_{\text{shell}}&=\lambda^{\prime}\sqrt{1-\frac{2M}{r}}=\lambda^{\prime}\sqrt{1-\frac{2M}{2.01M}}\approx0.0705\lambda^{\prime}
 \end{align*}
+
+This means that we would need a telescope that can observe x-rays to look at the different stars.
 
 \end{enumerate}
   
@@ -272,11 +299,17 @@ r&=\frac{2}{1-\left(\frac{600\,nm}{2150\,nm}\right)^{2}}M\approx2.1689M
 \addcontentsline{toc}{section}{Exercise 2C.2}
 \section*{Exercise 2C.2}
 
+We are looking at two shell observers: one close to the black hole far from the black hole. We want to study how they experience time differently.
+
 \begin{enumerate}
 
-\item Equation \ref{eq:kg_to_m} tells us how to convert the mass of the black hole from kilo into meters. \[\frac{M_{m}}{M_{kg}}=\frac{G}{c^{2}}\] (Check $\ldots$ for solution)
+\item First we need to find the mass of the black hole in our relativistic units. Equation \ref{eq:kg_to_m} tells us how to convert mass from kilo into meters. 
 
-\item Here you have to check MCast for solution. We suggest that you create a similar table to \ref{table:1}.
+\[\frac{M_{m}}{M_{kg}}=\frac{G}{c^{2}}\] 
+
+(Check $\ldots$ for solution)
+
+\item Here you have to check MCast for solution. We suggest that you create a similar table to table \ref{table:1}. Note that all times are in your own frame.
 
   \begin{table}[H]
   \begin{center}
@@ -292,22 +325,32 @@ r&=\frac{2}{1-\left(\frac{600\,nm}{2150\,nm}\right)^{2}}M\approx2.1689M
 \end{table}
 
 
-\item Equation \ref{eq:s_to_m} tells us how to convert the time from seconds into meters. \[t_{s}\cdot c=t_{m}\] (Check $\ldots$ for solution)
+\item Having found the time of your partners routine, you should now converte the time from seconds to meters. Equation \ref{eq:s_to_m} tells us how to do this. 
 
-\item Equation \ref{eq:shell_time} tells us shell and far-away time. We can think of our situation as having two shells: shell 1 (closest to the black hole at a distance $r_{1}$) and shell 2 (furthest away at a distance $r_{2}$).
+\[t_{s}\cdot c=t_{m}\] 
+
+(Check $\ldots$ for solution)
+
+\item We know how to converte between time for the shell and far-away observer, but not between different shell observers. We can think of our situation as having two shells: shell 1 (closest to the black hole at a distance $r_{1}$) and shell 2 (furthest away at a distance $r_{2}$). Using the relation between shell and far-away time (equation \ref{eq:shell_time}) we find
 
 \begin{align*}
-\Delta t_{\text{shell 1}}=\Delta t\sqrt{1-\frac{2M}{r_{1}}} &&\Rightarrow&& \Delta t=\frac{\Delta t_{\text{shell 1}}}{\sqrt{1-\frac{2M}{r_{1}}}}
+\Delta t_{\text{shell 1}}=\Delta t\sqrt{1-\frac{2M}{r_{1}}} &&\Rightarrow&& \Delta t=\frac{\Delta t_{\text{shell 1}}}{\sqrt{1-\frac{2M}{r_{1}}}}\\
 \Delta t_{\text{shell 2}}=\Delta t\sqrt{1-\frac{2M}{r_{2}}} &&\Rightarrow&& \Delta t=\frac{\Delta t_{\text{shell 2}}}{\sqrt{1-\frac{2M}{r_{2}}}}
 \end{align*}
 
 Inserting one into the other we find
 
 \begin{equation*}
-\Delta t_{\text{shell 2}}=\frac{\Delta t_{\text{shell 1}}}{\sqrt{1-\frac{2M}{r_{1}}}}\sqrt{1-\frac{2M}{r_{2}}}=\frac{\sqrt{1-\frac{2M}{r_{2}}}}{\sqrt{1-\frac{2M}{r_{1}}}}\Delta t_{\text{shell 1}}
+\Delta t_{\text{shell 2}}=\Delta t\sqrt{1-\frac{2M}{r_{2}}}=\frac{\Delta t_{\text{shell 1}}}{\sqrt{1-\frac{2M}{r_{1}}}}\sqrt{1-\frac{2M}{r_{2}}}=\frac{\sqrt{1-\frac{2M}{r_{2}}}}{\sqrt{1-\frac{2M}{r_{1}}}}\Delta t_{\text{shell 1}}
 \end{equation*}
 
-\item It should now be easy to transforme between the different times with the above formula. (Check $\ldots$ for solution)
+\item It should now be easy to transforme between the different times with the above formula, but remember that you have the time in meters and not days and hours. To converte back to days and hours we do like this:
+
+\begin{equation*}
+t_{\text{hours}}=\frac{t_{s}}{60\cdot60}=\frac{t_{m}\cdot c}{3600}
+\end{equation*}
+
+(Check $\ldots$ for solution)
 
 \item \textbf{Slå sammen 5 og 6}
 
@@ -325,38 +368,56 @@ Inserting one into the other we find
 \addcontentsline{toc}{section}{Exercise 2C.3}
 \section*{Exercise 2C.3}
 
+In this exercise we will show that angular momentum per mass is conserved in general relativity, using the principal of maximal aging. The deduction is very similar to those done in the lecture note.
+
 \begin{enumerate}
 
-\item It is allways true that the proper time of the object is $\Delta \tau$. If we look at a very small movement in space, we can assume that the radius in the Schwarzschild line element is constant. Since the proper time is allways equal to Schwarzschild line element we find
+\item First we want to find an expression for $\Delta\tau_{13}=\Delta\tau_{12}+\Delta\tau_{23}$. We will find $\Delta\tau_{12}$ and $\Delta\tau_{23}$ separately. We know that if we look at a very small movement in space, we can assume that the radius $r$ in the Schwarzschild line element is constant. Since the proper time is always equal to Schwarzschild line element we find
 
 \begin{align*}
-\Delta \tau_{12}&=\Delta s_{12}=\sqrt{\left(1-\frac{2M}{r_{A}}\right)}\Delta t_{12}^{2}-\frac{\Delta r_{12}^{2}}{1-\frac{2M}{r_{A}}}-r^{2}\Delta \phi_{12}^{2}\\
-\Delta \tau_{23}&=\Delta s_{23}=\sqrt{\left(1-\frac{2M}{r_{B}}\right)}\Delta t_{23}^{2}-\frac{\Delta r_{23}^{2}}{1-\frac{2M}{r_{B}}}-r^{2}\Delta \phi_{23}^{2}
+\Delta \tau_{12}^{2}&=\Delta s_{12}^{2}=\left(1-\frac{2M}{r_{A}}\right)\Delta t_{12}^{2}-\frac{\Delta r_{12}^{2}}{1-\frac{2M}{r_{A}}}-r_{A}^{2}\Delta \phi_{12}^{2}\\
+\Delta \tau_{23}^{2}&=\Delta s_{23}^{2}=\left(1-\frac{2M}{r_{B}}\right)\Delta t_{23}^{2}-\frac{\Delta r_{23}^{2}}{1-\frac{2M}{r_{B}}}-r_{B}^{2}\Delta \phi_{23}^{2}
 \end{align*}
 
-We only get the positive solution here since we only have positive time. The proper time between position 1 and 3 (since proper time is linear) must be $\Delta \tau_{13}=\Delta \tau_{12}+\Delta \tau_{23}$, thus giving
+Taking the square root we only get the positive solution here since we look at time moving in positive direction. The proper time between position 1 and 3 (since proper time is linear) must be $\Delta \tau_{13}=\Delta \tau_{12}+\Delta \tau_{23}$. Using the expressions we found above we get
 
 \begin{align*}
-\Delta \tau_{13}=\Delta \tau_{12}+\Delta \tau_{23}\\
-&=\sqrt{\left(1-\frac{2M}{r_{A}}\right)}\Delta t_{12}^{2}-\frac{\Delta r_{12}^{2}}{1-\frac{2M}{r_{A}}}-r^{2}\Delta \phi_{12}^{2}+\sqrt{\left(1-\frac{2M}{r_{B}}\right)}\Delta t_{23}^{2}-\frac{\Delta r_{23}^{2}}{1-\frac{2M}{r_{B}}}-r^{2}\Delta \phi_{23}^{2}
+\Delta \tau_{13}&=\Delta \tau_{12}+\Delta \tau_{23}\\
+&=\sqrt{\left(1-\frac{2M}{r_{A}}\right)\Delta t_{12}^{2}-\frac{\Delta r_{12}^{2}}{1-\frac{2M}{r_{A}}}-r_{A}^{2}\Delta \phi_{12}^{2}}+\sqrt{\left(1-\frac{2M}{r_{B}}\right)\Delta t_{23}^{2}-\frac{\Delta r_{23}^{2}}{1-\frac{2M}{r_{B}}}-r_{B}^{2}\Delta \phi_{23}^{2}}
 \end{align*}
 
-\item Principle of maximal aging tells us that 
+\item If we now take the derivative of the proper time $\Delta \tau_{13}$ with respect to the angle $\phi_{2}$, the principle of maximal aging tells us that the object will choose the angle which gives the largest proper time. In other words, we want to find the maximum of $\tau_{13}(\phi_{2})$, hence we want to find the value of $\phi_{2}$ such that $\frac{d\tau_{13}}{d\phi_{2}}=0$. \textbf{Hvorfor er dette toppunkt?}%Since time (and therefore especially proper time) is a monotone function, 
 
 \begin{align*}
-\frac{d\tau_{13}}{d\phi_{2}}&=\frac{d\tau_{12}}{d\phi_{2}}+\frac{d\tau_{23}}{d\phi_{2}}=\frac{1}{2}\frac{1}{d\tau_{12}}(-2r_{A}^{2}d\phi_{12})+\frac{1}{2}\frac{1}{d\tau_{23}}(-2r_{B}^{2}d\phi_{23})(-1)=0\\ \\
-\frac{r_{A}^{2}d\phi_{12}}{d\tau_{12}}&=\frac{r_{B}^{2}d\phi_{23}}{d\tau_{23}}
+\frac{d\tau_{13}}{d\phi_{2}}&=\frac{d\tau_{12}}{d\phi_{2}}+\frac{d\tau_{23}}{d\phi_{2}}
+=\frac{\sqrt{\left(1-\frac{2M}{r_{A}}\right)\Delta t_{12}^{2}-\frac{\Delta r_{12}^{2}}{1-\frac{2M}{r_{A}}}-r_{A}^{2}\Delta \phi_{12}^{2}}}{d\phi_{2}}+\frac{\sqrt{\left(1-\frac{2M}{r_{B}}\right)\Delta t_{23}^{2}-\frac{\Delta r_{23}^{2}}{1-\frac{2M}{r_{B}}}-r_{B}^{2}\Delta \phi_{23}^{2}}}{d\phi_{2}}\\
+&=\frac{1}{2\sqrt{\left(1-\frac{2M}{r_{A}}\right)\Delta t_{12}^{2}-\frac{\Delta r_{12}^{2}}{1-\frac{2M}{r_{A}}}-r_{A}^{2}\Delta \phi_{12}^{2}}}\frac{\left(1-\frac{2M}{r_{A}}\right)\Delta t_{12}^{2}-\frac{\Delta r_{12}^{2}}{1-\frac{2M}{r_{A}}}-r_{A}^{2}(\phi_{2}-\phi_{1})^{2}}{d\phi_{2}}\\
+&\;\;\;\;\;+\frac{1}{2\sqrt{\left(1-\frac{2M}{r_{B}}\right)\Delta t_{23}^{2}-\frac{\Delta r_{23}^{2}}{1-\frac{2M}{r_{B}}}-r_{B}^{2}\Delta \phi_{23}^{2}}}\frac{\left(1-\frac{2M}{r_{B}}\right)\Delta t_{23}^{2}-\frac{\Delta r_{23}^{2}}{1-\frac{2M}{r_{B}}}-r_{B}^{2}(\phi_{3}-\phi_{2})^{2}}{d\phi_{2}}\\
+&=\frac{1}{2}\frac{1}{d\tau_{12}}\left(\left(1-\frac{2M}{r_{A}}\right)\frac{\Delta t_{12}^{2}}{d\phi_{2}}-\frac{1}{1-\frac{2M}{r_{A}}}\frac{\Delta r_{12}^{2}}{d\phi_{2}}-r_{A}^{2}\frac{(\phi_{2}-\phi_{1})^{2}}{d\phi_{2}}\right)\\
+&\;\;\;\;\;+\frac{1}{2}\frac{1}{d\tau_{23}}\left(\left(1-\frac{2M}{r_{B}}\right)\frac{\Delta t_{23}^{2}}{d\phi_{2}}-\frac{1}{1-\frac{2M}{r_{B}}}\frac{\Delta r_{23}^{2}}{d\phi_{2}}-r_{B}^{2}\frac{(\phi_{3}-\phi_{2})^{2}}{d\phi_{2}}\right)\\
+&=\frac{1}{2}\frac{1}{d\tau_{12}}(0-0-2r_{A}^{2}d\phi_{12})\cdot1+\frac{1}{2}\frac{1}{d\tau_{23}}(0-0-2r_{B}^{2}d\phi_{23})\cdot(-1)\\
+&=-\frac{1}{2}\frac{1}{d\tau_{12}}(2r_{A}^{2}d\phi_{12})+\frac{1}{2}\frac{1}{d\tau_{23}}(2r_{B}^{2}d\phi_{23})
 \end{align*}
 
-\item What we have found is true for all intervalls $[a,b]$ small enough. By the principal of induction we get $\frac{d\phi_{ab}}{d\tau_{ab}}r_{ab/2}^{2}=\text{constant}$. In other words, \[\frac{r^{2}d\phi}{d\tau}=\text{constant}\]
+Setting this equal to zero and equation we find
 
-\item We remember from celest mechanics that $v_{\phi}=r\frac{d\phi}{dt}$. We also remember that $\frac{dt}{d\tau}=\gamma$
+\begin{equation*}
+\frac{r_{A}^{2}d\phi_{12}}{d\tau_{12}}=\frac{r_{B}^{2}d\phi_{23}}{d\tau_{23}}
+\end{equation*}
+
+\item What we have found is true for all intervalls $[a_{0},a_{1}]$ small enough. Thus if the intervall was larger, for instance $[a=a_{0},a_{n}=b]$, we could separate it to $n$ small enough intervalls so that the equation over holds for every intervall. By the principal of induction we get $\frac{d\phi_{ab}}{d\tau_{ab}}r_{ab/2}^{2}=\text{constant}$. In other words, 
+
+\[\frac{r^{2}d\phi}{d\tau}=\text{constant}\] 
+
+regardless of the intervall.
+
+\item We remember from celest mechanics that angular velocity, measured by the shell observer, is given by $v_{\phi}=r\frac{d\phi}{dt_{\text{shell}}}$. We also remember from spesial relativity that $\frac{dt_{\text{shell}}}{d\tau}=\gamma_{\text{shell}}$. Using that $\frac{dt_{\text{shell}}}{dt_{\text{shell}}}=1$ we therefore find
 
 \begin{align*}
-\frac{r^{2}d\phi}{d\tau}&=r\left(r\frac{d\phi}{dt}\frac{dt}{d\tau}\right)=rv_{\phi}\gamma_{shell}
+\frac{r^{2}d\phi}{d\tau}&=r\left(r\frac{d\phi}{dt_{\text{shell}}}\frac{dt_{\text{shell}}}{d\tau}\right)=rv_{\phi}\gamma_{shell}
 \end{align*}
 
-\item We know from mechanics that spinn is given by $L=|\vec{r}\times\vec{p}|=r\cdot v_{\phi}$. For small velocities $v\ll1$ we have $\gamma_{\text{shell}}=\frac{1}{1-v_{shell}^{2}}\approx\frac{1}{1-0^{2}}=1$. Thus \[\frac{r^{2}d\phi}{d\tau}=rv_{\phi}\gamma_{shell}=r\frac{mv_{\phi}}{m}=\frac{L}{m}\]
+\item We know from mechanics that spin is given by $L=|\vec{r}\times\vec{p}|=r\cdot v_{\phi}$. For small velocities $v_{\text{shell}}\ll1$ we have $\gamma_{\text{shell}}=\frac{1}{1-v_{shell}^{2}}\approx\frac{1}{1-0^{2}}=1$. Thus \[\frac{r^{2}d\phi}{d\tau}=rv_{\phi}\gamma_{shell}=r\frac{mv_{\phi}}{m}\cdot1=\frac{L}{m}\]
  
 \end{enumerate}
 
