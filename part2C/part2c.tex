@@ -1,0 +1,685 @@
+\documentclass[a4paper,10pt,english]{article}
+\usepackage[utf8]{inputenc}
+%\usepackage[norsk]{babel}
+% Standard stuff
+\usepackage{amsmath,graphicx,varioref,verbatim,amsfonts,geometry,grffile}
+% colors in text
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+% Hyper refs
+\usepackage[colorlinks]{hyperref}
+\usepackage{flafter}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{fancyvrb}
+\usepackage{comment}
+\usepackage{csquotes}
+
+%latex graphics
+\usepackage{tikz}
+\usetikzlibrary{arrows, decorations.pathmorphing}
+
+
+% Document formatting
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{1.5mm}
+
+%Color scheme for listings
+\usepackage{textcomp}
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+
+%Listings configuration
+\usepackage{listings}
+%Hvis du bruker noe annet enn python, endre det her for å få riktig highlighting.
+\lstset{
+	backgroundcolor=\color{lbcolor},
+	tabsize=4,
+	rulecolor=,
+	language=python,
+        basicstyle=\scriptsize,
+        upquote=true,
+        aboveskip={1.5\baselineskip},
+        columns=fixed,
+	numbers=left,
+        showstringspaces=false,
+        extendedchars=true,
+        breaklines=true,
+        prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+        frame=single,
+        showtabs=false,
+        showspaces=false,
+        showstringspaces=false,
+        identifierstyle=\ttfamily,
+        keywordstyle=\color[rgb]{0,0,1},
+        commentstyle=\color[rgb]{0.133,0.545,0.133},
+        stringstyle=\color[rgb]{0.627,0.126,0.941}
+        }
+        
+
+\begin{document}
+\title{Solutions to exercise in part 2C}
+%\author{Johan Andreas Fløisand}
+\date{}
+\maketitle
+\tableofcontents
+\clearpage
+
+\addcontentsline{toc}{section}{Usefull formulas and constants}
+\section*{Usefull formulas and constants}
+
+\subsection*{Constants}
+The following constants may be used:
+\begin{itemize}
+\item Mass of the Earth:      $M_{\text{Earth}}=5.972\cdot10^{24}\,kg$ 
+\item Mass of the sun:        $M_{\text{sun}}=1.989\cdot10^{30}\,kg$
+\item Radius of the Earth:    $r_{\text{Earth}}=6371\,km$
+\item Radius of the sun:      $r_{\text{sun}}=695\,508\,km$
+\item Speed of light:         $c=299\,792\,458\,m/s$
+\item Gravitational constant: $G=6.67408\cdot10^{-11}\,\frac{m^{3}}{kg\,s^{2}}$
+\end{itemize}
+
+\subsection*{Line elements}
+The Schwawrzschild line element is given by:
+
+\begin{equation}\label{eq:schwarzschild}
+\Delta s^{2}=\left(1-\frac{2M}{r}\right)\Delta t^{2}-\frac{\Delta r^{2}}{1-\frac{2M}{r}}-r^{2}\Delta\phi^{2},
+\end{equation}
+
+where $M$ is the mass of the central mass at $r=0$ (usually a black hole, a star or a planet), $r$ is the Schwarzschild radius (see lecture note 2C if you do not remember this), $\Delta t$ is the difference in time, $\Delta r$ is the difference in radial position and $\Delta\phi$ is the difference in the angular position between two events.
+\\
+This equation tells us that the intervall $\Delta s^{2}$ between two events is allways equal for all frames of referance.
+\\
+\\
+If we are dealing with a local inertial frame (see lecture note 2C if you do not remember what this is), we are allowed to use the Lorentz line element:
+
+\begin{equation}\label{eq:lorentz}
+\Delta s^{2}=\Delta t^{2}-\Delta x^{2}=\Delta t^{2}-\Delta r^{2}-r^{2}\Delta\phi^{2},
+\end{equation}
+
+where $\Delta x$ is the difference in $x$-position and all other variables are the same as in the Schwarzschild line element. As above, $\Delta s^{2}$ between two events is equal for all observers.
+
+
+\subsection*{Change of units}
+
+In the theory of relativity we will use natural unit. That is, we want to measure time and mass in meters. We converte between mass in kilos and meters as follows:
+
+\begin{equation}\label{eq:kg_to_m}
+\frac{M_{m}}{M_{kg}}=\frac{G}{c^{2}}\left(\approx\frac{6.67408\cdot10^{-11}\,m^{3}kg^{-1}s^{-2}}{(299\,792\,458\,m/s)^{2}}\approx7.4259\cdot10^{-28}\right)
+\end{equation}
+
+Here $M_{m}$ and $M_{kg}$ the mass of the object in question in meters and kilos respectively, $G$ is the gravitational constant and $c$ is the speed of light.
+%$\frac{G}{c^{2}}\approx\frac{6.67408\cdot10^{-11}\,m^{3}kg^{-1}s^{-2}}{(299\,792\,458\,m/s)^{2}}\approx7.4259\cdot10^{-28}$
+\\
+\\
+To converte between time in seconds and meters we do like this:
+ 
+\begin{equation}\label{eq:s_to_m}
+t_{s}\cdot c=t_{m}
+\end{equation}
+
+Here $t_{s}$ and $t_{m}$ is time in seconds and meters respectively and $c$ is the speed of light.
+
+
+\subsection*{Time and length differance between observers}
+
+In lecture note 2C we have deduced the following relation between the time and length measured by the shell and far-away observer:
+
+\begin{equation}\label{eq:shell_time}
+\Delta t_{\text{shell}}=\Delta t\sqrt{1-\frac{2M}{r}},
+\end{equation}
+and
+\begin{equation}\label{eq:shell_length}
+\Delta r_{\text{shell}}=\frac{\Delta r}{\sqrt{1-\frac{2M}{r}}}
+\end{equation}
+
+Here $\Delta t_{\text{shell}}$ and $\Delta t$ is the time difference measured by the shell and far-away observer respectively, $\Delta r_{\text{shell}}$ and $\Delta r$ is the difference in radial position measured by the shell and far-away observer respectively, $M$ is the mass of the central mass and $r$ is the Schwarzschild radius.
+
+\subsection*{Conservation laws}
+In lecture note 2C we are given the following consevation laws:
+\\
+Energy per mass
+
+\begin{equation}\label{eq:E/m}
+\frac{E}{m}=\left(1-\frac{2M}{r}\right)\frac{dt}{d\tau}=\text{constant},
+\end{equation}
+
+where $E$ and $m$ is the energy and mass of the object, $M$ is the mass of the central mass, $r$ is the Schwazscild radius, $dt$ the time difference measured by the far-away observer and $d\tau$ is the proper time of the object.
+
+Angular momentum per mass
+
+\begin{equation}\label{eq:L/m}
+\frac{L}{m}=r^{2}\frac{d\phi}{d\tau}=\gamma_{\text{shell}}rv_{\phi}=\text{constant},
+\end{equation}
+
+where $L$ is the angular momentum, $m$ is the mass of the object, $r$ is the Schwarzschild radius, $d\phi$ is the angular difference measured by the far-away observer, $d\tau$ is the proper time of the object, $\gamma_{\text{shell}}=\frac{1}{\sqrt{1-v_{\text{shell}}^{2}}}$ where $v_{\text{shell}}$ is the velocity of the object measured by a shell observer and $v_{\phi}$ is the angular velocity of the object measured by the far-away observer.
+
+\newpage
+
+
+
+
+
+
+
+
+\addcontentsline{toc}{section}{Exercise 2C.1}
+\section*{Exercise 2C.1}
+
+
+We are observing a laser with frequency $\nu_{\text{shell}}=1/\Delta t_\text{shell}$, measured by a shell observer at a distance $r$ from a central mass, and $\nu^{\prime}=1/\Delta t^{\prime}$, measured by a far-away observer (when the laser reaches him). $\Delta t^{\prime}$ and $\Delta t_\text{shell}$ are the difference between two peaks of the electromagnetic wave of the laser.
+
+\begin{enumerate}
+
+\item We want to find the relation between the two time differences. In lecture note 2C we derived a relation between the time measured by a shell and far-away observer (equation \ref{eq:shell_time}).
+%, which is valid for $\Delta r_{shell}\approx0$ and $\Delta \phi_\text{shell}=0$. 
+Since the distance between two peaks on an electromagnetic wave is very small (if we exclude radio waves), we are allowed to use equation \ref{eq:shell_time} which gives us \[\Delta t^{\prime}=\frac{\Delta t_{\text{shell}}}{\sqrt{1-\frac{2M}{r}}}\]
+
+\item We can now show the gravitational ``Doppler" formula. We know that the relation between wave length and frequency is $\lambda=\frac{c}{\nu}=\frac{1}{\nu}$, since $c=1$ in relativistic units. Thus we get
+
+\begin{align*}
+\frac{\Delta \lambda}{\lambda_{\text{shell}}}&=\frac{\lambda^{\prime}-\lambda_{\text{shell}}}{\lambda_{\text{shell}}}=\frac{1/\nu^{\prime}}{1/\nu_{\text{shell}}}-1\\
+&=\frac{\Delta t^{\prime}}{\Delta t_{\text{shell}}}-1=\frac{\Delta t_{\text{shell}}}{\sqrt{1-\frac{2M}{r}}}\frac{1}{\Delta t_{\text{shell}}}-1\\
+&=\frac{1}{\sqrt{1-\frac{2M}{r}}}-1
+\end{align*}
+  
+\item $x=\frac{2M}{r}$, $f(x)=\frac{1}{\sqrt{1-x}}$
+
+\begin{align*}
+f^{\prime}(x)&=\left[(1-x)^{-1/2}\right]^{\prime}=\frac{-1}{2}(1-x)^{-3/2}(-1)=\frac{1}{2}(1-x)^{-3/2} &&\Rightarrow&& f^{\prime}(0)&=\frac{1}{2}\\
+f^{\prime\prime}(x)&=\frac{1}{2}\left[(1-x)^{-3/2}\right]^{\prime}=\frac{1}{2}\frac{-3}{2}(1-x)^{-5/2}(-1)=\frac{3}{4}(1-x)^{-5/2} &&\Rightarrow&& f^{\prime\prime}(0)&=\frac{3}{4}
+\end{align*}  
+
+\begin{equation*}
+\frac{1}{\sqrt{1-x}}=f(x)\approx T_{2}f(x)=f(0)+xf^{\prime}(0)=1+\frac{1}{2}x
+\end{equation*}
+
+\begin{align*}
+\frac{\Delta \lambda}{\lambda_{\text{shell}}}&=\frac{1}{\sqrt{1-\frac{2M}{r}}}-1\approx T_{2}f(2M/r)-1=f(0)+\frac{2M}{r}f^{\prime}(0)-1=1+\frac{1}{2}\frac{2M}{r}-1\\
+&=\frac{M}{r}
+\end{align*}
+
+
+\item $\lambda_{\text{max}}=500\,nm$.
+
+\begin{enumerate}
+
+\item Equation \ref{eq:kg_to_m} \[M_{m}=\frac{G}{c^{2}}M_{kg}=7.4259\cdot10^{-28}\,m/kg\cdot2\cdot10^{30}\,kg\approx1485.18\,m\]
+
+\item The radius of the sun is $r_{\text{sun}}=695\,508\,km$. \[\frac{M}{r}\approx\frac{1485.18\,m}{695\,508\cdot10^{3}\,m}\approx2.1354\cdot10^{-6}\]
+
+\item Since $\frac{2M}{r}\ll 1$ we are allowed to use our Taylor expansion $\frac{\Delta \lambda}{\lambda}=\frac{M}{r}\approx2.1354\cdot10^{-6}$.
+\\
+Alternatively:
+\begin{equation*}
+\frac{\Delta \lambda}{\lambda}=\frac{1}{\sqrt{1-\frac{2M}{r}}}-1\approx\frac{1}{\sqrt{1-2\cdot2.1354\cdot10^{-6}}}-1\approx2.1354\cdot10^{-6}
+\end{equation*}
+  
+\item
+
+\begin{align*}
+\frac{\Delta \lambda}{\lambda}&=\frac{\lambda^{\prime}-\lambda_{\text{shell}}}{\lambda_{\text{shell}}}=\frac{1}{\sqrt{1-\frac{2M}{r}}}-1\\
+\frac{\lambda^{\prime}}{\lambda_{\text{shell}}}&=\frac{1}{\sqrt{1-\frac{2M}{r}}}\\
+\lambda^{\prime}&=\frac{1}{\sqrt{1-\frac{2M}{r}}}\lambda_{\text{shell}}\approx\frac{1}{\sqrt{1-2\cdot2.1354\cdot10^{-6}}}\cdot500\cdot10^{-9}\,m\approx500.001\,nm
+\end{align*}
+  
+\item The mass and radius of the earth are $M_{\text{Earth}}=5.972\cdot10^{24}$ and $r_{\text{Earth}}=6\,371\cdot10^{3}\,m$, giving $M_{m,\text{Earth}}=\frac{G}{c^{2}}M_{kg,\text{Earth}}\approx7.4259\cdot10^{-28}\,m/kg\cdot5.972\cdot10^{24}\,kg\approx4.4347\cdot10^{-3}\,m$, hence \[\frac{M}{r}\approx\frac{4.4347\cdot10^{-3}\,m}{6\,371\cdot10^{3}\,m}\approx6.9608\cdot10^{-10}\]
+  
+\item Since the light is approaching the earth, we need to reverse the doppler formula.
+
+\begin{align*}
+\frac{\Delta \lambda}{\lambda^{\prime}}&=\frac{\lambda_{\text{shell}}-\lambda^{\prime}}{\lambda^{\prime}}=\frac{\Delta t_{\text{shell}}}{\Delta t^{\prime}}-1\\
+&=\frac{\Delta t_{\text{shell}}}{\Delta t_{\text{shell}}/\sqrt{1-\frac{2M}{r}}}-1=\sqrt{1-\frac{2M}{r}}-1\\
+&\approx\sqrt{1-2\cdot6.9608\cdot10^{-10}}-1\approx-6.9608\cdot10^-{10}
+\end{align*}
+
+Thus the observed wave length on earth is
+
+\begin{align*}
+\frac{\Delta \lambda}{\lambda^{\prime}}&=\frac{\lambda_{\text{shell}}}{\lambda^{\prime}}-1=\sqrt{1-\frac{2M}{r}}-1\\
+\lambda_{\text{shell}}&=\lambda^{\prime}\sqrt{1-\frac{2M}{r}}\approx500\,nm\cdot\sqrt{1-6.9608\cdot10^{-10}}\\
+&\approx500.000\,nm
+\end{align*}
+  
+\end{enumerate}
+
+\item 
+
+\begin{align*}
+\frac{\Delta \lambda}{\lambda_{\text{shell}}}&=\frac{\lambda^{\prime}}{\lambda_{\text{shell}}}-1=\frac{1}{\sqrt{1-\frac{2M}{r}}}-1\\
+1-\frac{2M}{r}&=\left(\frac{\lambda_{\text{shell}}}{\lambda^{\prime}}\right)^{2}\\
+\frac{2M}{r}&=1-\left(\frac{\lambda_{\text{shell}}}{\lambda^{\prime}}\right)^{2}\\
+r&=\frac{2M}{1-\left(\frac{\lambda_{\text{shell}}}{\lambda^{\prime}}\right)^{2}}\\
+r&=\frac{2}{1-\left(\frac{600\,nm}{2150\,nm}\right)^{2}}M\approx2.1689M
+\end{align*}
+
+\item 
+
+\begin{align*}
+\frac{\Delta \lambda}{\lambda^{\prime}}&=\frac{\lambda_{\text{shell}}}{\lambda^{\prime}}-1=\sqrt{1-\frac{2M}{r}}-1\\
+\lambda_{\text{shell}}&=\lambda^{\prime}\sqrt{1-\frac{2M}{r}}=\lambda^{\prime}\sqrt{1-\frac{2M}{2.01M}}\approx0.0705\lambda^{\prime}
+\end{align*}
+
+\end{enumerate}
+  
+
+
+
+
+
+
+
+
+\addcontentsline{toc}{section}{Exercise 2C.2}
+\section*{Exercise 2C.2}
+
+\begin{enumerate}
+
+\item Equation \ref{eq:kg_to_m} tells us how to convert the mass of the black hole from kilo into meters. \[\frac{M_{m}}{M_{kg}}=\frac{G}{c^{2}}\] (Check $\ldots$ for solution)
+
+\item Here you have to check MCast for solution. We suggest that you create a similar table to \ref{table:1}.
+
+  \begin{table}[H]
+  \begin{center}
+    \begin{tabular}{| l | l | l | l | l | l | l | }
+   	\hline
+	Time & Wake up & Breakfast & Lunch & Dinner & Brush teeth & Bed \\ \hline
+	 $t$ (your schedule) & $t_{1}$ & $t_{2}$ & $t_{3}$ & $t_{4}$ & $t_{5}$ & $t_{6}$ \\ \hline
+	 $t^{\prime}$ (partners schedule) & $t^{\prime}_{1}$ & $t^{\prime}_{2}$ & $t^{\prime}_{3}$ & $t^{\prime}_{4}$ & $t^{\prime}_{5}$ & $t^{\prime}_{6}$\\ \hline
+	\end{tabular}
+    \caption{A table for the different times in your frame.}
+    \label{table:1}
+  \end{center}
+\end{table}
+
+
+\item Equation \ref{eq:s_to_m} tells us how to convert the time from seconds into meters. \[t_{s}\cdot c=t_{m}\] (Check $\ldots$ for solution)
+
+\item Equation \ref{eq:shell_time} tells us shell and far-away time. We can think of our situation as having two shells: shell 1 (closest to the black hole at a distance $r_{1}$) and shell 2 (furthest away at a distance $r_{2}$).
+
+\begin{align*}
+\Delta t_{\text{shell 1}}=\Delta t\sqrt{1-\frac{2M}{r_{1}}} &&\Rightarrow&& \Delta t=\frac{\Delta t_{\text{shell 1}}}{\sqrt{1-\frac{2M}{r_{1}}}}
+\Delta t_{\text{shell 2}}=\Delta t\sqrt{1-\frac{2M}{r_{2}}} &&\Rightarrow&& \Delta t=\frac{\Delta t_{\text{shell 2}}}{\sqrt{1-\frac{2M}{r_{2}}}}
+\end{align*}
+
+Inserting one into the other we find
+
+\begin{equation*}
+\Delta t_{\text{shell 2}}=\frac{\Delta t_{\text{shell 1}}}{\sqrt{1-\frac{2M}{r_{1}}}}\sqrt{1-\frac{2M}{r_{2}}}=\frac{\sqrt{1-\frac{2M}{r_{2}}}}{\sqrt{1-\frac{2M}{r_{1}}}}\Delta t_{\text{shell 1}}
+\end{equation*}
+
+\item It should now be easy to transforme between the different times with the above formula. (Check $\ldots$ for solution)
+
+\item \textbf{Slå sammen 5 og 6}
+
+\item Talk with your partner.
+  
+\end{enumerate}
+
+
+
+
+
+
+
+
+\addcontentsline{toc}{section}{Exercise 2C.3}
+\section*{Exercise 2C.3}
+
+\begin{enumerate}
+
+\item It is allways true that the proper time of the object is $\Delta \tau$. If we look at a very small movement in space, we can assume that the radius in the Schwarzschild line element is constant. Since the proper time is allways equal to Schwarzschild line element we find
+
+\begin{align*}
+\Delta \tau_{12}&=\Delta s_{12}=\sqrt{\left(1-\frac{2M}{r_{A}}\right)}\Delta t_{12}^{2}-\frac{\Delta r_{12}^{2}}{1-\frac{2M}{r_{A}}}-r^{2}\Delta \phi_{12}^{2}\\
+\Delta \tau_{23}&=\Delta s_{23}=\sqrt{\left(1-\frac{2M}{r_{B}}\right)}\Delta t_{23}^{2}-\frac{\Delta r_{23}^{2}}{1-\frac{2M}{r_{B}}}-r^{2}\Delta \phi_{23}^{2}
+\end{align*}
+
+We only get the positive solution here since we only have positive time. The proper time between position 1 and 3 (since proper time is linear) must be $\Delta \tau_{13}=\Delta \tau_{12}+\Delta \tau_{23}$, thus giving
+
+\begin{align*}
+\Delta \tau_{13}=\Delta \tau_{12}+\Delta \tau_{23}\\
+&=\sqrt{\left(1-\frac{2M}{r_{A}}\right)}\Delta t_{12}^{2}-\frac{\Delta r_{12}^{2}}{1-\frac{2M}{r_{A}}}-r^{2}\Delta \phi_{12}^{2}+\sqrt{\left(1-\frac{2M}{r_{B}}\right)}\Delta t_{23}^{2}-\frac{\Delta r_{23}^{2}}{1-\frac{2M}{r_{B}}}-r^{2}\Delta \phi_{23}^{2}
+\end{align*}
+
+\item Principle of maximal aging tells us that 
+
+\begin{align*}
+\frac{d\tau_{13}}{d\phi_{2}}&=\frac{d\tau_{12}}{d\phi_{2}}+\frac{d\tau_{23}}{d\phi_{2}}=\frac{1}{2}\frac{1}{d\tau_{12}}(-2r_{A}^{2}d\phi_{12})+\frac{1}{2}\frac{1}{d\tau_{23}}(-2r_{B}^{2}d\phi_{23})(-1)=0\\ \\
+\frac{r_{A}^{2}d\phi_{12}}{d\tau_{12}}&=\frac{r_{B}^{2}d\phi_{23}}{d\tau_{23}}
+\end{align*}
+
+\item What we have found is true for all intervalls $[a,b]$ small enough. By the principal of induction we get $\frac{d\phi_{ab}}{d\tau_{ab}}r_{ab/2}^{2}=\text{constant}$. In other words, \[\frac{r^{2}d\phi}{d\tau}=\text{constant}\]
+
+\item We remember from celest mechanics that $v_{\phi}=r\frac{d\phi}{dt}$. We also remember that $\frac{dt}{d\tau}=\gamma$
+
+\begin{align*}
+\frac{r^{2}d\phi}{d\tau}&=r\left(r\frac{d\phi}{dt}\frac{dt}{d\tau}\right)=rv_{\phi}\gamma_{shell}
+\end{align*}
+
+\item We know from mechanics that spinn is given by $L=|\vec{r}\times\vec{p}|=r\cdot v_{\phi}$. For small velocities $v\ll1$ we have $\gamma_{\text{shell}}=\frac{1}{1-v_{shell}^{2}}\approx\frac{1}{1-0^{2}}=1$. Thus \[\frac{r^{2}d\phi}{d\tau}=rv_{\phi}\gamma_{shell}=r\frac{mv_{\phi}}{m}=\frac{L}{m}\]
+ 
+\end{enumerate}
+
+
+
+
+
+
+
+
+\addcontentsline{toc}{section}{Exercise 2C.4}
+\section*{Exercise 2C.4}
+
+\begin{enumerate}
+
+\item In the lecture notes we have found that equation \ref{eq:E/m} can be written as 
+
+\[\frac{E}{m}=\left(1-\frac{2M}{r}\right)\frac{dt}{d\tau}=1,\]
+
+When the velocity $v=0$ and the distance $r\to\infty$. This gives us
+\begin{align*}
+d\tau=\left(1-\frac{2M}{r}\right)dt
+\end{align*}
+
+\item
+
+\begin{align*}
+\left(\frac{dr}{dt}\right)^{2}&=\left(\frac{dr}{\frac{d\tau}{1-\frac{2M}{r}}}\right)^{2}=\left(1-\frac{2M}{r}\right)^{2}\frac{dr^{2}}{\left(1-\frac{2M}{r}\right)dt^{2}-\frac{dr^{2}}{1-\frac{2M}{r}}}\\
+&=\left(1-\frac{2M}{r}\right)\frac{dr^{2}}{dt^{2}-\frac{dr^{2}}{\left(1-\frac{2M}{r}\right)^{2}}}=\left(1-\frac{2M}{r}\right)\frac{dr^{2}/dt^{2}}{1-\frac{dr^{2}/dt^{2}}{\left(1-\frac{2M}{r}\right)^{2}}}\\
+\nu^{2}&=\alpha\frac{\nu^{2}}{1-\frac{\nu^{2}}{\alpha^{2}}}=\frac{\alpha^{3}}{\frac{\alpha^{2}}{\nu^{2}}-1}\\
+\nu^{2}\left(\frac{\alpha^{2}}{\nu^{2}}-1\right)&=\alpha^{3}\\
+\alpha^{2}-\nu^{2}&=\alpha^{3}\\
+\nu^{2}&=\alpha^{2}(1-\alpha)\\
+\left(\frac{dr}{dt}\right)^{2}&=\left(1-\frac{2M}{r}\right)^{2}\left[1-\left(1-\frac{2M}{r}\right)\right]=\left(1-\frac{2M}{r}\right)^{2}\frac{2M}{r}
+\end{align*}
+
+\item Velocity is the change in position over the change of time, in other words, $v=\frac{dr}{dt}$. Hence we have 
+
+\begin{equation*}
+v=\pm\sqrt{\left(\frac{dr}{dt}\right)^{2}}=\pm\sqrt{\left(1-\frac{2M}{r}\right)^{2}\frac{2M}{r}}=-\left(1-\frac{2M}{r}\right)\sqrt{\frac{2M}{r}}
+\end{equation*}
+
+The minus sign comes from the fact that the spaceship is traveling towards the black hole.
+
+\item We have in the lecture notes derived equation \ref{eq:shell_time} and \ref{eq:shell_length} as the transformation between shell and far-away observers. Hence
+
+\begin{equation}
+v_{\text{shell}}=\frac{dr_{\text{shell}}}{dt_{\text{shell}}}=\frac{\frac{dr}{\sqrt{1-\frac{2M}{r}}}}{dt\sqrt{1-\frac{2M}{r}}}=\frac{-\left(1-\frac{2M}{r}\right)\sqrt{\frac{2M}{r}}}{1-\frac{2M}{r}}=-\sqrt{\frac{2M}{r}}
+\end{equation}
+
+
+\end{enumerate}
+
+
+
+
+
+
+
+
+\addcontentsline{toc}{section}{Exercise 2C.5}
+\section*{Exercise 2C.5}
+
+\begin{enumerate}
+
+\item The satellite positioned at $1\,AU$ from the black hole will be the shell observer and the \textquote{falling} spaceship will be the freely falling observer.
+
+\item The equation for conservation of energy \ref{eq:E/m} and the tranformation between shell and far-away observers time \ref{eq:shell_time} tells us 
+
+\begin{equation*}
+\frac{E}{m}=\left(1-\frac{2M}{r}\right)dt\frac{1}{d\tau}=\left(1-\frac{2M}{r}\right)\frac{dt_{\text{shell}}}{\sqrt{1-\frac{2M}{r}}}\frac{1}{d\tau}={\sqrt{1-\frac{2M}{r}}}\frac{dt_{\text{shell}}}{d\tau}={\sqrt{1-\frac{2M}{r}}}\gamma_{\text{shell}}
+\end{equation*}
+
+
+\item (Check $\ldots$ for solution)
+
+\item 
+
+\begin{align*}
+\frac{E}{m}&=\left(1-\frac{2M}{r}\right)\frac{dt}{d\tau}\\
+d\tau&=\frac{1-\frac{2M}{r}}{E/m}dt
+\end{align*}
+
+\item 
+
+\begin{equation*}
+d\tau=\frac{1-\frac{2M}{r}}{E/m}dt=\frac{1-\frac{2M}{r}}{E/m}\frac{dt_{\text{shell}}}{\sqrt{1-\frac{2M}{r}}}=\frac{1-\frac{2M}{r}}{E/m}\frac{dt_{\text{shell}}}{\sqrt{1-\frac{2M}{r}}}=\frac{\sqrt{1-\frac{2M}{r}}}{E/m}dt_{\text{shell}}
+\end{equation*}
+
+\item 
+
+\begin{align*}
+d\tau&=\frac{\sqrt{1-\frac{2M}{r}}}{E/m}dt_{\text{shell}}\\
+\left(\frac{d\tau}{dt_{\text{shell}}}E/m\right)^{2}&=1-\frac{2M}{r}\\
+r&=\frac{2M}{1-\left(\frac{d\tau}{dt_{\text{shell}}}E/m\right)^{2}}
+\end{align*}
+
+(Check $\ldots$ for solution) 
+
+\item (Check $\ldots$ for solution) 
+
+\item We know $d\tau=\frac{\sqrt{1-\frac{2M}{r}}}{E/m}dt_{\text{shell}}$, so when $r\to2M$, $d\tau\to0$ and $dt_{\text{shell}}\to\infty$. That is, the time difference increases for the shell observer and decreases for the freely falling observer.
+
+\item When we get to close to the Schwarzschild horizon, we will see all of time passing by. This means that the signals from the shell observer will end up as a constant signal, just as in the video.
+
+\end{enumerate}
+
+
+
+
+
+
+
+
+\addcontentsline{toc}{section}{Exercise 2C.6}
+\section*{Exercise 2C.6}
+
+\begin{enumerate}
+
+\item Using consevation of energy \ref{eq:E/m}
+
+\begin{align*}
+\frac{E}{m}&=\left(1-\frac{2M}{r}\right)\frac{\Delta t}{\Delta\tau}\\
+\Delta t&=\frac{E/m}{1-\frac{2M}{r}}\Delta\tau
+\end{align*}
+
+\item Using consevation of angular momentum \ref{eq:L/m}
+
+\begin{align*}
+\frac{L}{m}&=r^{2}\frac{\Delta\phi}{\Delta\tau}\\
+\Delta\phi&=\frac{L/m}{r^{2}}\Delta\tau
+\end{align*}
+
+\item Using \ref{eq:schwarzschild} we find
+
+\begin{align*}
+\Delta\tau^{2}&=\Delta s^{2}=\left(1-\frac{2M}{r}\right)\Delta t^{2}-\frac{\Delta r^{2}}{1-\frac{2M}{r}}-r^{2}\Delta\phi^{2}\\
+&=\left(1-\frac{2M}{r}\right)\left(\frac{E/m}{1-\frac{2M}{r}}\Delta\tau\right)^{2}-\frac{\Delta r^{2}}{1-\frac{2M}{r}}-r^{2}\left(\frac{L/m}{r^{2}}\Delta\tau\right)^{2}\\
+&=\frac{(E/m)^{2}}{1-\frac{2M}{r}}\Delta\tau^{2}-\frac{\Delta r^{2}}{1-\frac{2M}{r}}-\frac{(L/m)^{2}}{r^{2}}\Delta\tau^{2}\\ \\
+\left(1-\frac{2M}{r}\right)\Delta\tau^{2}&=(E/m)^{2}\Delta\tau^{2}-\Delta r^{2}-\left(1-\frac{2M}{r}\right)\frac{(L/m)^{2}}{r^{2}}\Delta\tau^{2}\\
+\Delta r^{2}&=(E/m)^{2}\Delta\tau^{2}-\left(1-\frac{2M}{r}\right)\frac{(L/m)^{2}}{r^{2}}\Delta\tau^{2}-\left(1-\frac{2M}{r}\right)\Delta\tau^{2}\\
+&=\left((E/m)^{2}-\left[\frac{(L/m)^{2}}{r^{2}}+1\right]\left(1-\frac{2M}{r}\right)\right)\Delta\tau^{2}\\
+\Delta r&=\pm\sqrt{\left(\frac{E}{m}\right)^{2}-\left[1+\left(\frac{L/m}{r}\right)^{2}\right]\left(1-\frac{2M}{r}\right)}\Delta\tau^{2}
+\end{align*}
+
+\end{enumerate}
+
+
+
+
+
+
+
+
+\addcontentsline{toc}{section}{Exercise 2C.7}
+\section*{Exercise 2C.7}
+
+\begin{enumerate}
+
+\item 
+
+\begin{align*}
+\Delta\tau^{2}&=\Delta (s^{\prime})^{2}=\left(1-\frac{2M}{r+\Delta r}\right)\Delta t^{2}-\frac{\overbrace{\Delta r^{2}}^{=0}}{1-\frac{2M}{r+\Delta r}}-(r+\Delta r)^{2}\Delta\phi^{2}_{\text{plane}}\\
+&=\left(1-\frac{2M}{r+\Delta r}\right)-(r+\Delta r)^{2}\frac{\Delta\phi^{2}_{\text{plane}}}{\Delta t^{2}}=1-\frac{2M}{r+\Delta r}-v_{\text{plane}}^{2}
+\end{align*}
+
+\begin{align*}
+\Delta t_{\text{earth}}^{2}&=\Delta s^{2}=\left(1-\frac{2M}{r}\right)\Delta t^{2}-\frac{\overbrace{\Delta r^{2}}^{=0}}{1-\frac{2M}{r}}-r^{2}\Delta\phi^{2}_{\text{earth}}\\
+&=\left(1-\frac{2M}{r}\right)-r^{2}\frac{\Delta\phi^{2}_{\text{earth}}}{\Delta t^{2}}=1-\frac{2M}{r}-v_{\text{earth}}^{2}
+\end{align*}
+
+\begin{equation*}
+\frac{\Delta\tau}{\Delta t_{\text{earth}}}=\sqrt{\frac{1-\frac{2M}{r+\Delta r}-v_{\text{plane}}^{2}}{1-\frac{2M}{r}-v_{\text{earth}}^{2}}}
+\end{equation*}
+
+\item We can change units with equations \ref{eq:kg_to_m} and \ref{eq:s_to_m}. This gives
+
+\begin{align*}
+M_{m}&=\frac{G}{c^{2}}M_{kg}=\frac{6.67408\cdot10^{-11}\,\frac{m^{3}}{kg\,s^{2}}}{(299\,792\,458\,m/s)^{2}}5.972\cdot10^{24}\,kg\approx4.435\cdot10^{-3}\,m\\
+\frac{M_{m}}{r}&=\frac{4.435\cdot10^{-3}\,m}{6371\cdot10^{3}\,m}\approx6.961\cdot10^{-10}\\
+v_{\text{plane}}&=\frac{1000/3.6}{c}\approx9.267\cdot10^{-7}\\
+v_{\text{Earth}}&=\frac{2\pi\cdot6371\cdot10^{3}}{24\cdot60\cdot60}\frac{1}{c}\approx1.545\cdot10^{-6}
+\end{align*}
+
+
+\item We choose $x=-\left(\frac{2M}{r+\Delta r}+v_{\text{plane}}^{2}\right)$ and $y=-\left(\frac{2M}{r}+v_{\text{earth}}^{2}\right)$. We can now create a Taylor expansion of $f(x)=\sqrt{1+x}$ and $g(y)=\frac{1}{\sqrt{1+y}}$.
+
+\begin{align*}
+f^{\prime}(x)&=\left[(1+x)^{1/2}\right]^{\prime}=\frac{1}{2}(1+x)^{-1/2} &\Rightarrow&& f^{\prime}(0)&=\frac{1}{2}\\
+g^{\prime}(y)&=\left[(1+y)^{-1/2}\right]^{\prime}=-\frac{1}{2}(1+y)^{-3/2} &\Rightarrow&& g^{\prime}(0)&=-\frac{1}{2}\\
+\end{align*}
+
+The Taylor expansion thus becomes $f(x)\approx T_{1}f(x)=f(0)+xf^{\prime}(0)=1+\frac{1}{2}x$ and $g(y)\approx T_{1}g(y)=g(0)+xg^{\prime}(0)=1-\frac{1}{2}y$. Hence we get
+
+\begin{align*}
+\frac{\Delta\tau}{\Delta t_{\text{earth}}}&=\sqrt{\frac{1-\frac{2M}{r+\Delta r}-v_{\text{plane}}^{2}}{1-\frac{2M}{r}-v_{\text{earth}}^{2}}}\approx T_{1}f(x)\cdot T_{1}g(y)=1+\frac{1}{2}x-\frac{1}{2}y-\overbrace{\frac{1}{4}xy}^{\approx0}\\
+&\approx1+\frac{1}{2}\left[-\left(\frac{2M}{r+\Delta r}+v_{\text{plane}}^{2}\right)\right]-\frac{1}{2}\left[-\left(\frac{2M}{r}+v_{\text{earth}}^{2}\right)\right]\\
+&=1+\frac{1}{2}\left[\frac{2M}{r}-\frac{2M}{r+\Delta r}\right]+\frac{1}{2}\left[v_{\text{earth}}^{2}-v_{\text{plane}}^{2}\right]\\
+&=1+\frac{1}{2}\left[v_{\text{earth}}^{2}-v_{\text{plane}}^{2}\right]+M\left[\frac{1}{r}-\frac{1}{r+\Delta r}\right]
+\end{align*}
+
+\item 
+
+\begin{align*}
+\frac{d\tau}{dt}&=1+\frac{1}{2}\left[v_{\text{earth}}^{2}-v_{\text{plane}}^{2}\right]+M\left[\frac{1}{r}-\frac{1}{r+\Delta r}\right]\\
+&\approx1+\frac{1}{2}\left[(1.545\cdot10^{-6})^{2}-(9.267\cdot10^{-7})^{2}\right]+4.435\cdot10^{-3}\left[\frac{1}{6371\cdot10^{3}}-\frac{1}{(6371+10)\cdot10^{3}}\right]\approx1
+\end{align*}
+
+The differance is of order $10^{-12}$, so almost nothing at all.
+
+\item The difference is barely anything. A better reason would be to save the environment.
+
+\end{enumerate}
+
+
+
+
+
+
+
+
+\addcontentsline{toc}{section}{Exercise 2C.8}
+\section*{Exercise 2C.8}
+
+\begin{enumerate}
+
+\item 
+
+\[|\vec{r}|=\sqrt{x^{2}+y^{2}}\]
+
+\item We remember Keplers' 2. law as 
+
+\begin{equation}\label{eq:kepler}
+P^{2}=\frac{4\pi^{2}}{G\underbrace{m_{1}+m_{2}}_{=M}}a^{3}
+\end{equation}
+
+If we assume circular motion (that is $a=r$) and use that the period of the satellites orbits can be written as $P=t=\frac{s}{v}=\frac{2\pi r}{v_{\theta}}$, equation \ref{eq:kepler} becomes
+
+\begin{align*}
+\left(\frac{2\pi r}{v_{\theta}}\right)^{2}&=\frac{4\pi^{2}r^{3}}{GM}\\
+2\pi r&=\pm2\pi r\sqrt{\frac{r}{GM}}v_{\theta}\\
+v_{\theta}&=\pm\sqrt{\frac{GM}{r}}
+\end{align*}
+
+\item \textbf{Trenger figur}
+
+Law of cosine:
+
+\begin{equation}
+C^{2}=A^{2}+B^{2}-AB\cos{\theta}
+\end{equation}
+
+\begin{align*}
+\vec{r}_{\text{sat}}=\begin{vmatrix}x_{\text{sat}}\\y_{\text{sat}}\end{vmatrix} &&\text{and}&& \vec{r}=\begin{vmatrix}x\\y\end{vmatrix} &&\Rightarrow&& \vec{r}_{\text{sat}}-\vec{r}=\begin{vmatrix}x_{\text{sat}}-x\\y_{\text{sat}}-y\end{vmatrix}
+\end{align*}
+
+\begin{align*}
+(c\Delta t)^{2}&=|\vec{r}_{\text{sat}}-\vec{r}|^{2}=|\vec{r}|^{2}+|\vec{r}_{\text{sat}}|^{2}-2|\vec{r}||\vec{r}_{\text{sat}}|\cos{\alpha}\\
+\alpha&=\arccos{\left(\frac{|\vec{r}|^{2}+|\vec{r}_{\text{sat}}|^{2}-(c\Delta t)^{2}}{2|\vec{r}||\vec{r}_{\text{sat}}|}\right)}
+\end{align*}
+
+\begin{align*}
+\tan{\theta}=\frac{y_{\text{sat}}}{x_{\text{sat}}} \Rightarrow \theta=\arctan{\left(\frac{y_{\text{sat}}}{x_{\text{sat}}}\right)}
+\end{align*}
+
+%|vec{r}_{\text{sat}}-\vec{r}|^{2}=(x_{\text{sat}}-x)^{2}+(y_{\text{sat}}-y)^{2}
+
+\item 
+
+\begin{align*}
+\Delta t_{\text{sat}}^{2}&=\Delta (s^{\prime})^{2}=\left(1-\frac{2M}{|\vec{r}_{\text{sat}}|}\right)\Delta t^{2}-\frac{\overbrace{\Delta r^{2}}^{=0}}{1-\frac{2M}{|\vec{r}_{\text{sat}}|}}-|\vec{r}_{\text{sat}}|^{2}\Delta\theta^{2}_{\text{sat}}\\
+&=\left(1-\frac{2M}{|\vec{r}_{\text{sat}}|}\right)-|\vec{r}_{\text{sat}}|^{2}\frac{\Delta\theta^{2}_{\text{sat}}}{\Delta t^{2}}=1-\frac{2M}{|\vec{r}_{\text{sat}}|}-v_{\text{sat}}^{2}
+\end{align*}
+
+\begin{align*}
+\Delta t_{\text{earth}}^{2}&=\Delta s^{2}=\left(1-\frac{2M}{|r|}\right)\Delta t^{2}-\frac{\overbrace{\Delta r^{2}}^{=0}}{1-\frac{2M}{|r|}}-r^{2}\Delta\phi^{2}_{\text{earth}}\\
+&=\left(1-\frac{2M}{|r|}\right)-|r|^{2}\frac{\Delta\phi^{2}_{\text{earth}}}{\Delta t^{2}}=1-\frac{2M}{r}-v_{\text{earth}}^{2}
+\end{align*}
+
+\begin{equation*}
+\frac{\Delta t_{\text{sat}}}{\Delta t_{\text{earth}}}=\sqrt{\frac{1-\frac{2M}{|\vec{r}_{\text{sat}}|}-v_{\text{sat}}^{2}}{1-\frac{2M}{|r|}-v_{\text{earth}}^{2}}}
+\end{equation*}
+
+\item (Check $\ldots$ for solution)
+
+\item (Check $\ldots$ for solution)
+
+\item The more time that passes, the more wrong the expression $|\vec{r}_{\text{sat}}-r|=c\Delta t$ becomes since $\Delta t$ is wrong. After a couple of days, the GPS will be totaly useless and just give wrong positions.
+
+\end{enumerate}
+\newpage
+
+
+\begin{figure}[ht]
+\centering
+\scalebox{1.5}{
+\begin{tikzpicture}[decoration = {snake,pre length=0pt,post length=0pt,amplitude=0.4mm,segment length=2}]
+\draw[>=stealth,->] (-0.4,0) -- (4.0,0) node [pos=1,below] {\(x\)};
+\draw[>=stealth,->] (0,-0.4) -- (0,4.0) node [pos=1,left] {\(y\)};
+\draw[>=stealth,->] (0,0) -- (20:3cm) node [pos=1,right] {\(\textbf{r}\)};
+\draw[>=stealth,->] (0,0) -- (60:4cm) node [pos=1,above] {\(\textbf{r}_{\text{sat}}\)};
+\draw[decorate] (20:3) -- (60:4) node [pos=0.5,right] {\footnotesize Signal};
+\draw[dashed] (20:4) -- (20:6); 
+\draw[dashed] (60:4) +(20:1) -- +(20:3);
+\draw[>=stealth,<-] (20:5) -- +(20+90:{0.4*sqrt((4*cos(60)-3*cos(20))^2+(4*sin(60)-3*sin(20))^2)});
+\draw[>=stealth,->] (20:5) 
++(20+90:{0.6*sqrt((4*cos(60)-3*cos(20))^2+(4*sin(60)-3*sin(20))^2)}) -- 
++(20+90:{1.00*sqrt((4*cos(60)-3*cos(20))^2+(4*sin(60)-3*sin(20))^2)});
+\draw node at (34.5:5.2) {\(c\Delta t\)}; 
+\draw[variable=\x, domain=0:20, smooth, samples=60, >=stealth, ->] plot (\x:1.2);
+\draw node at (10:1.5) {\(\phi\)};
+\draw[variable=\x, domain=20:60, smooth, samples=60, >=stealth, ->] plot (\x:0.8);
+\draw node at (40:1.1) {\(\alpha\)};
+\draw[variable=\x, domain=0:60, smooth, samples=60, >=stealth, ->] plot (\x:2.0);
+\draw node at (30:2.2) {\(\theta\)};
+\draw[black!45!white, dashed, variable=\x, domain=0:90, smooth, samples=45] plot (\x:3);
+\draw node at (80:3.2) {\footnotesize Surface};  
+\end{tikzpicture}}
+\caption{en Hei}
+\end{figure}
+
+
+
+
+
+\end{document}

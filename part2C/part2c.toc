@@ -1,0 +1,9 @@
+\contentsline {section}{Usefull formulas and constants}{2}{section*.1}
+\contentsline {section}{Exercise 2C.1}{4}{equation.0.8}
+\contentsline {section}{Exercise 2C.2}{6}{Item.12}
+\contentsline {section}{Exercise 2C.3}{7}{Item.19}
+\contentsline {section}{Exercise 2C.4}{8}{Item.24}
+\contentsline {section}{Exercise 2C.5}{9}{equation.0.9}
+\contentsline {section}{Exercise 2C.6}{10}{Item.37}
+\contentsline {section}{Exercise 2C.7}{11}{Item.40}
+\contentsline {section}{Exercise 2C.8}{12}{Item.45}

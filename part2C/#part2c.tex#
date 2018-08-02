@@ -1,0 +1,426 @@
+\documentclass[a4paper,10pt,english]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[norsk]{babel}
+% Standard stuff
+\usepackage{amsmath,graphicx,varioref,verbatim,amsfonts,geometry,grffile}
+% colors in text
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+% Hyper resf
+\usepackage[colorlinks]{hyperref}
+\usepackage{flafter}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{fancyvrb}
+\usepackage{comment}
+\usepackage{csquotes}
+
+
+% Document formatting
+\setlength{\parindent}{0mm}
+\setlength{\parskip}{1.5mm}
+
+%Color scheme for listings
+\usepackage{textcomp}
+\definecolor{listinggray}{gray}{0.9}
+\definecolor{lbcolor}{rgb}{0.9,0.9,0.9}
+
+%Listings configuration
+\usepackage{listings}
+%Hvis du bruker noe annet enn python, endre det her for å få riktig highlighting.
+\lstset{
+	backgroundcolor=\color{lbcolor},
+	tabsize=4,
+	rulecolor=,
+	language=python,
+        basicstyle=\scriptsize,
+        upquote=true,
+        aboveskip={1.5\baselineskip},
+        columns=fixed,
+	numbers=left,
+        showstringspaces=false,
+        extendedchars=true,
+        breaklines=true,
+        prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+        frame=single,
+        showtabs=false,
+        showspaces=false,
+        showstringspaces=false,
+        identifierstyle=\ttfamily,
+        keywordstyle=\color[rgb]{0,0,1},
+        commentstyle=\color[rgb]{0.133,0.545,0.133},
+        stringstyle=\color[rgb]{0.627,0.126,0.941}
+        }
+        
+
+\begin{document}
+\title{Solutions to exercise in part 2C}
+\author{Johan Andreas Fløisand}
+\maketitle
+\clearpage
+
+
+\section*{Usefull fromulas}
+
+\subsection*{Line elements}
+The Schwawrzschild line element is invariant; the following intervall between two events is allways equal for all frames of referance:
+
+\begin{equation}\label{eq:schwarzschild}
+\Delta s^{2}=\left(1-\frac{2M}{r}\right)\Delta t^{2}-\frac{\Delta r^{2}}{1-\frac{2M}{r}}-r^{2}\Delta\phi^{2}
+\end{equation}
+
+If we are dealing with a local inertial frame, we are allowed to use the Lorentz line element:
+
+\begin{equation}\label{eq:lorentz}
+\Delta s^{2}=\Delta t^{2}-\Delta x^{2}=\Delta t^{2}-\Delta r^{2}-r^{2}\Delta\phi^{2}
+\end{equation}
+
+
+
+
+\subsection*{Change of units}
+
+\begin{equation}\label{eq:kg_to_m}
+\frac{M_{m}}{M_{kg}}=\frac{G}{c^{2}}
+\end{equation}
+
+$\frac{G}{c^{2}}\approx\frac{6.67408\cdot10^{-11}\,m^{3}kg^{-1}s^{-2}}{(299\,792\,458\,m/s)^{2}}\approx7.4259\cdot10^{-28}$
+ 
+\begin{equation}\label{eq:s_to_m}
+t_{s}\cdot c=t_{m}
+\end{equation}
+
+
+
+
+\subsection*{Time and length differance between observers}
+
+\begin{equation}\label{eq:shell_time}
+\Delta t_{\text{shell}}=\Delta t\sqrt{1-\frac{2M}{r}}
+\end{equation}
+
+\begin{equation}\label{eq:shell_length}
+\Delta r_{\text{shell}}=\frac{\Delta r}{\sqrt{1-\frac{2M}{r}}}
+\end{equation}
+
+
+
+
+\subsection*{Conservation laws}
+Energy per mass
+
+\begin{equation}\label{eq:E/m}
+\frac{E}{m}=\left(1-\frac{2M}{r}\right)\frac{dt}{d\tau}=\text{constant}
+\end{equation}
+
+Angular momentum per mass
+
+\begin{equation}\label{eq:L/m}
+\frac{L}{m}=r^{2}\frac{d\phi}{d\tau}=\gamma_{\text{shell}}rv_{\phi}=\text{constant}
+\end{equation}
+
+\newpage
+
+
+
+
+
+
+
+
+
+\section*{Exercise 2C.1}
+
+
+We are observing a laser with frequency $\ny_{\text{shell}}=1/\Delta t_{shell}$, measured by a shell observer at a distance $r$ from a central mass, and $\ny^{\prime}=1/\Delta t^{\prime}$, measured by a far-away observer when the laser reaches him. $\Delta t^{\prime}$ and $\Delta t_{shell}$ are the difference between two peaks of electromagnetic waves.
+
+\begin{enumerate}
+
+\item We want to find the relation between the two time differences.In the text we derived equation \ref{eq:shell_time}, which is valid for $\Delta r_{shell}\approx0$ and $\Delta \phi_{shell}=0$. Since the distance between two peaks on an electromagnetic wave is very small (if we exclude radio waves), we are allowed to use equation \ref{eq:shell_time} which gives us \[\Delta t^{\prime}=\frac{\Delta t_{\text{shell}}}{\sqrt{1-\frac{2M}{r}}}
+
+\item We can now show the gravitational \textquote{Doppler} formula. We know that the relation between wave length and frequency is $\lambda=\frac{c}{\ny}=\frac{1}{\ny}$, since $c=1$ in relativistic units. Thus we get
+
+\begin{align*}
+\frac{\Delta \lambda}{\lambda_{\text{shell}}}&=\frac{\lambda^{\prime}-\lambda_{\text{shell}}}{\lambda_{\text{shell}}}=\frac{1/\ny^{\prime}}{1/\ny_{\text{shell}}}-1\\
+&=\frac{\Delta t^{\prime}}{\Delta t_{\text{shell}}}-1=\frac{\Delta t_{\text{shell}}}{\sqrt{1-\frac{2M}{r}}}\frac{1}{\Delta t_{\text{shell}}}-1\\
+&=\frac{1}{\sqrt{1-\frac{2M}{r}}}-1
+\end{align*}
+  
+\item $x=\frac{2M}{r}$, $f(x)=\frac{1}{\sqrt{1-x}}$
+
+\begin{align*}
+f^{\prime}(x)&=\left[(1-x)^{-1/2}\right]^{\prime}=\frac{-1}{2}(1-x)^{-3/2}(-1)=\frac{1}{2}(1-x)^{-3/2} &&\Rightarrow&& f^{\prime}(0)&=\frac{1}{2}\\
+f^{\prime\prime}(x)&=\frac{1}{2}\left[(1-x)^{-3/2}\right]^{\prime}=\frac{1}{2}\frac{-3}{2}(1-x)^{-5/2}(-1)=\frac{3}{4}(1-x)^{-5/2} &&\Rightarrow&& f^{\prime\prime}(0)&=\frac{3}{4}
+\end{align*}  
+
+\begin{equation*}
+\frac{1}{\sqrt{1-x}=f(x)\approx T_{2}f(x)=f(0)+xf^{\prime}(0)=1+\frac{1}{2}x
+\end{equation*}
+
+\begin{align*}
+\frac{\Delta \lambda}{\lambda_{\text{shell}}}&=\frac{1}{\sqrt{1-\frac{2M}{r}}-1\approx T_{2}f(2M/r)-1=f(0)+\frac{2M}{r}f^{\prime}(0)-1=1+\frac{1}{2}\frac{2M}{r}-1\\
+&=\frac{M}{r}
+\end{align*}
+
+
+\item $\lambda_{\text{max}}=500\,nm$.
+
+\begin{enumerate}
+
+\item Equation \ref{eq:kg_to_m} \[M_{m}=\frac{G}{c^{2}}M_{kg}=7.4259\cdot10^{-28}\,m/kg\cdot2\cdot10^{30}\,kg\approx1485.18\,m\]
+
+\item The radius of the sun is $r_{\text{sun}}=695\,508\,km$. \[\frac{M}{r}\apporx\frac{1485.18\,m}{695\,508\cdot10^{3}\,m}\approx2.1354\cdot10^{-6}\]
+
+\item Since $\frac{2M}{r}\ll 1$ we are allowed to use our Taylor expansion $\frac{\Delta \lambda}{\lambda}=\frac{M}{r}\approx2.1354\cdot10^{-6}$.
+\\
+Alternatively:
+\begin{equation*}
+\frac{\Delta \lambda}{\lambda}=\frac{1}{\sqrt{1-\frac{2M}{r}}}-1\approx\frac{1}{\sqrt{1-2\cdot2.1354\cdot10^{-6}}}-1\approx2.1354\cdot10^{-6}
+\end{equation*}
+  
+\item
+
+  \begin{align*}
+    \frac{\Delta \lambda}{\lambda}&=\frac{\lambda^{\prime}-\lambda_{\text{shell}}}{\lambda_{\text{shell}}}=\frac{1}{\sqrt{1-\frac{2M}{r}}}-1\\
+    \frac{\lambda^{\prime}}{\lambda_{\text{shell}}}&=\frac{1}{\sqrt{1-\frac{2M}{r}}}\\
+    \lambda^{\prime}&=\frac{1}{\sqrt{1-\frac{2M}{r}}}\lambda_{\text{shell}}\approx\frac{1}{\sqrt{1-2\cdot2.1354\cdot10^{-6}}\cdot500\cdot10^{-9}\,m\approx500.001\,nm
+  \end{align*}
+  
+\item The mass and radius of the earth are $M_{\text{Earth}}=5.972\cdot10^{24}$ and $r_{\text{Earth}}=6\,371\cdot10^{3}\,m$, giving $M_{m,\text{Earth}}=\frac{G}{c^{2}}M_{kg,\text{Earth}}\approx7.4259\cdot10^{-28}\,m/kg\cdot5.972\cdot10^{24}\,kg\approx4.4347\cdot10^{-3}\,m$, hence \[\frac{M}{r}\approx\frac{4.4347\cdot10^{-3}\,m}{6\,371\cdot10^{3}\,m}\approx6.9608\cdot10^{-10}\]
+  
+\item Since the light is approaching the earth, we need to reverse the doppler formula.
+
+\begin{align*}
+  \frac{\Delta \lambda}{\lambda^{\prime}}&=\frac{\lambda_{\text{shell}}-\lambda^{\prime}}{\lambda^{\prime}}=\frac{\Delta t_{\text{shell}}}{\Delta t^{\prime}}-1\\
+  &=\frac{\Delta t_{\text{shell}}}{\Delta t_{\text{shell}}/\sqrt{1-\frac{2M}{r}}}-1=\sqrt{1-\frac{2M}{r}}-1\\
+  &\approx\sqrt{1-2\cdot6.9608\cdot10^{-10}}-1\approx-6.9608\cdot10^-{10}
+\end{align*}
+
+Thus the observed wave length on earth is
+
+\begin{align*}
+\frac{\Delta \lambda}{\lambda^{\prime}}&=\frac{\lambda_{\text{shell}}}{\lambda^{\prime}}-1=\sqrt{1-\frac{2M}{r}}-1\\
+\lambda_{\text{shell}}&=\lambda^{\prime}\sqrt{1-\frac{2M}{r}}\approx500\,nm\cdot\sqrt{1-6.9608\cdot10^{-10}}\\
+&\approx500.000\,nm
+\end{align*}
+  
+\end{enumerate}
+
+\item 
+
+\begin{align*}
+\frac{\Delta \lambda}{\lambda_{\text{shell}}}&=\frac{\lambda^{\prime}}{\lambda_{\text{shell}}}-1=\frac{1}{\sqrt{1-\frac{2M}{r}}}-1\\
+1-\frac{2M}{r}&=\left(\frac{\lambda_{\text{shell}}}{\lambda^{\prime}}\right)^{2}\\
+\frac{2M}{r}&=1-\left(\frac{\lambda_{\text{shell}}}{\lambda^{\prime}}\right)^{2}\\
+r&=\frac{2M}{1-\left(\frac{\lambda_{\text{shell}}}{\lambda^{\prime}}\right)^{2}}
+r&=\frac{2}{1-\left(\frac{600\,nm}{2150\,nm}\right)^{2}}M\approx2.1689M
+\end{align*}
+
+\item 
+
+\begin{align*}
+\frac{\Delta \lambda}{\lambda^{\prime}}&=\frac{\lambda_{\text{shell}}}{\lambda^{\prime}}-1=\sqrt{1-\frac{2M}{r}}-1\\
+\lambda_{\text{shell}}&=\lambda^{\prime}\sqrt{1-\frac{2M}{r}}=\lambda^{\prime}\sqrt{1-\frac{2M}{2.01M}}\approx0.0705\lambda^{\prime}
+\end{align*}
+
+\end{enumerate}
+  
+
+
+
+
+
+
+
+
+
+\section*{Exercise 2C.2}
+
+\begin{enumerate}
+
+\item Equation \ref{eq:kg_to_m} tells us how to convert the mass of the black hole from kilo into meters. \[\frac{M_{m}}{M_{kg}}=\frac{G}{c^{2}}\] (Check $\ldots$ for solution)
+
+\item Here you have to check MCast for solution. We suggest that you create a similar table to \ref{table:1}.
+
+  \begin{table}[H]
+  \begin{center}
+    \begin{tabular}{| l | l | l | l | l | l | l | }
+   	\hline
+	Time & Wake up & Breakfast & Lunch & Dinner & Brush teeth & Bed \\ \hline
+	 $t$ (your schedule) & $t_{1}$ & $t_{2}$ & $t_{3}$ & $t_{4}$ & $t_{5}$ & $t_{6}$ \\ \hline
+	 $t^{\prime}$ (partners schedule) & $t^{\prime}_{1}$ & $t^{\prime}_{2}$ & $t^{\prime}_{3}$ & $t^{\prime}_{4}$ & $t^{\prime}_{5}$ & $t^{\prime}_{6}$
+	\end{tabular}
+    \caption{A table for the different times in your frame.}
+    \label{table:1}
+  \end{center}
+\end{table}
+
+
+\item Equation \ref{eq:s_to_m} tells us how to convert the time from seconds into meters. \[t_{s}\cdot c=t_{m}\] (Check $\ldots$ for solution)
+
+\item Equation \ref{eq:shell_time} tells us shell and far-away time. We can think of our situation as having two shells: shell 1 (closest to the black hole at a distance $r_{1}$) and shell 2 (furthest away at a distance $r_{2}$).
+
+\begin{align*}
+  \Delta t_{\text{shell 1}}=\Delta t\sqrt{1-\frac{2M}{r_{1}}} &&\Rightarrow&& \Delta t=\frac{\Delta t_{\text{shell 1}}}{\sqrt{1-\frac{2M}{r_{1}}}}
+  \Delta t_{\text{shell 2}}=\Delta t\sqrt{1-\frac{2M}{r_{2}}} &&\Rightarrow&& \Delta t=\frac{\Delta t_{\text{shell 2}}}{\sqrt{1-\frac{2M}{r_{2}}}}
+\end{align*}
+
+Inserting one into the other we find
+
+\begin{equation*}
+\Delta t_{\text{shell 2}}=\frac{\Delta t_{\text{shell 1}}}{\sqrt{1-\frac{2M}{r_{1}}}}\sqrt{1-\frac{2M}{r_{2}}}=\frac{\sqrt{1-\frac{2M}{r_{2}}}}{\sqrt{1-\frac{2M}{r_{1}}}}\Delta t_{\text{shell 1}}
+\end{equation*}
+
+\item It should now be easy to transforme between the different times with the above formula. (Check $\ldots$ for solution)
+
+\item \textbf{Slå sammen 5 og 6}
+
+\item Talk with your partner.
+  
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+\section*{Exercise 2C.3}
+
+\begin{enumerate}
+
+\item It is allways true that the proper time of the object is $\Delta \tau$. If we look at a very small movement in space, we can assume that the radius in the Schwarzschild line element is constant. Since the proper time is allways equal to Schwarzschild line element we find
+
+  \begin{align*}
+    \Delta \tau_{12}&=\Delta s_{12}=\sqrt{\left(1-\frac{2M}{r_{A}}\right)\Delta t_{12}^{2}-\frac{\Delta r_{12}^{2}}{1-\frac{2M}{r_{A}}}-r^{2}\Delta \phi_{12}^{2}\\
+      \Delta \tau_{23}&=\Delta s_{23}=\sqrt{\left(1-\frac{2M}{r_{B}}\right)\Delta t_{23}^{2}-\frac{\Delta r_{23}^{2}}{1-\frac{2M}{r_{B}}}-r^{2}\Delta \phi_{23}^{2}
+  \end{align*}
+
+  We only get the positive solution here since we only have positive time. The proper time between position 1 and 3 (since proper time is linear) must be $\Delta \tau_{13}=\Delta \tau_{12}+\Delta \tau_{23}$, thus giving
+
+  \begin{align*}
+    \Delta \tau_{13}=\Delta \tau_{12}+\Delta \tau_{23}\\
+    &=\sqrt{\left(1-\frac{2M}{r_{A}}\right)\Delta t_{12}^{2}-\frac{\Delta r_{12}^{2}}{1-\frac{2M}{r_{A}}}-r^{2}\Delta \phi_{12}^{2}+\sqrt{\left(1-\frac{2M}{r_{B}}\right)\Delta t_{23}^{2}-\frac{\Delta r_{23}^{2}}{1-\frac{2M}{r_{B}}}-r^{2}\Delta \phi_{23}^{2}
+  \end{align*}
+
+\item Principle of maximal aging tells us that 
+
+  \begin{align*}
+    \frac{d\tau_{13}}{d\phi_{2}}&=\frac{d\tau_{12}}{d\phi_{2}}+\frac{d\tau_{23}}{d\phi_{2}}=\frac{1}{2}\frac{1}{d\tau_{12}}(-2r_{A}^{2}d\phi_{12})+\frac{1}{2}\frac{1}{d\tau_{23}}(-2r_{B}^{2}d\phi_{23})(-1)=0\\
+    \frac{r_{A}^{2}d\phi_{12}}{d\tau_{12}}=\frac{r_{B}^{2}d\phi_{23}}{d\tau_{23}}
+  \end{align*}
+
+\item What we have found is true for all intervalls $[a,b]$ small enough. By the principal of induction we get $\frac{r_{ab/2}^{2}d\phi_{ab}}{d\tau_{ab}}=\text{constant}$. In other words, \[\frac{r^{2}d\phi}{d\tau}=\text{constant}\]
+
+\item We remember from celest mechanics that $v_{\phi}=r\frac{d\phi}{dt}$. We also remember that $\frac{dt}{d\tau}=\gamma$
+  \begin{align*}
+    \frac{r^{2}d\phi}{d\tau}&=r\left(r\frac{d\phi}{dt}\frac{dt}{d\tau})=rv_{\phi}\gamma_{shell}
+    \end{align*}
+
+\item We know from mechanics that spinn is given by $L=|\vec{r}\times\vec{p}|=r\cdot v_{\phi}$. For small velocities $v\ll1$ we have $\gamma_{\text{shell}}=\frac{1}{1-v_{shell}^{2}}\approx\frac{1}{1-0^{2}}=1$. Thus \[\frac{r^{2}d\phi}{d\tau}=rv_{\phi}\gamma_{shell}=r\frac{mv_{\phi}}{m}=\frac{L}{m}\]
+ 
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+\section*{Exercise 2C.4}
+
+\begin{enumerate}
+
+\item In the lecture notes we have found that equation \ref{eq:E/m} can be written as 
+
+\[
+\frac{E}{m}=\left(1-\frac{2M}{r}\right)\frac{dt}{d\tau}=1,
+\]
+When the velocity $v=0$ and the distance $r\to\infty$. This gives us
+\begin{align*}
+d\tau=\left(1-\frac{2M}{r}\right)dt
+\end{align*}
+
+\item
+
+  \begin{align*}
+    \left(\frac{dr}{dt}\right)^{2}&=\left(\frac{dr}{\frac{d\tau}{1-frac{2M}{r}}}\right)^{2}=\left(1-frac{2M}{r}\right)^{2}\frac{dr^{2}}{\left(1-\frac{2M}{r}\right)dt^{2}-\frac{dr^{2}}{1-\frac{2M}{r}}}\\
+    &=\left(1-frac{2M}{r}\right)\frac{dr^{2}}{dt^{2}-\frac{dr^{2}}{\left(1-\frac{2M}{r}\right)^{2}}}&=
+
+    \end{align*}
+
+\item
+
+\item
+
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+\section*{Exercise 2C.5}
+
+\begin{enumerate}
+
+\item Find answer in MCast
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+\section*{Exercise 2C.6}
+
+\begin{enumerate}
+
+\item Find answer in MCast
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+\section*{Exercise 2C.7}
+
+\begin{enumerate}
+
+\item Find answer in MCast
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+\section*{Exercise 2C.8}
+
+\begin{enumerate}
+
+\item Find answer in MCast
+\end{enumerate}
+
+
+
+
+
+
+\end{document}
