@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.7.31)  2 AUG 2018 18:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.7.31)  3 AUG 2018 12:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1341,53 +1341,85 @@ Overfull \hbox (43.67319pt too wide) detected at line 400
 []
  []
 
-[9] [10] [11] [12] [13] [14]
-Overfull \hbox (29.9849pt too wide) detected at line 627
+[9] [10] [11] [12]
+Overfull \hbox (12.74693pt too wide) in paragraph at lines 564--565
+\OT1/cmr/m/n/10 In this ex-er-cise we will find re-la-tions be-tween proper tim
+e and the main vari-ables in the Schwarzschild
+ []
+
+[13] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 619--626
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 619--626
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 619--626
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 619--626
+
+ []
+
+[15]
+Overfull \hbox (29.9849pt too wide) detected at line 672
 []
  []
 
-[15] [16] [17pdfTeX warning (ext4): destination with the same identifier (name{
-figure.1}) has been already used, duplicate ignored
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 706--710
+
+ []
+
+[17] [18pdfTeX warning (ext4): destination with the same identifier (name{figur
+e.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.746 \end{document}
-                    ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 746.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 746.
+l.788 \end{align*}
+                  ] [19]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 832.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 832.
  (./part2c.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 746.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 746.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 832.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 832.
 Package rerunfilecheck Info: File `part2c.out' has not changed.
-(rerunfilecheck)             Checksum: AE6694AE8B56A3CF14DE1E613FF37B67;444.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 746.
+(rerunfilecheck)             Checksum: E3AE96ACE3273B98C9ADD0D2AB3F2E85;439.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 832.
  ) 
 Here is how much of TeX's memory you used:
- 21493 strings out of 494880
- 397443 string characters out of 6179601
- 511668 words of memory out of 5000000
- 24321 multiletter control sequences out of 15000+600000
+ 21495 strings out of 494880
+ 397448 string characters out of 6179601
+ 513513 words of memory out of 5000000
+ 24322 multiletter control sequences out of 15000+600000
  12457 words of font info for 48 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 55i,18n,65p,911b,784s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,18n,65p,911b,874s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/jaf/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on part2c.pdf (17 pages, 227258 bytes).
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on part2c.pdf (19 pages, 247925 bytes).
 PDF statistics:
- 302 PDF objects out of 1000 (max. 8388607)
- 265 compressed objects within 3 object streams
- 98 named destinations out of 1000 (max. 500000)
+ 322 PDF objects out of 1000 (max. 8388607)
+ 282 compressed objects within 3 object streams
+ 99 named destinations out of 1000 (max. 500000)
  85 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -431,22 +431,34 @@ regardless of the intervall.
 \addcontentsline{toc}{section}{Exercise 2C.4}
 \section*{Exercise 2C.4}
 
+We are interested in finding the velocity of an object with respect to the distance $r$ from the central mass. We will do this for the special case when the object has velocity $v=0$ at a distance so large that we can assume $r\to\infty$.
+
 \begin{enumerate}
 
-\item In the lecture notes we have found that equation \ref{eq:E/m} can be written as 
+\item In the lecture notes we have found that energy per mass is conserved and given by equation \ref{eq:E/m}. When the velocity $v=0$ and the distance to the central mass is so large that we can assume $r\to\infty$, the equation is given by
 
 \[\frac{E}{m}=\left(1-\frac{2M}{r}\right)\frac{dt}{d\tau}=1,\]
 
-When the velocity $v=0$ and the distance $r\to\infty$. This gives us
+thus giving the following relation between proper time of the object ($d\tau$) and the time measured by the far-away observer ($dt$):
+
 \begin{align*}
 d\tau=\left(1-\frac{2M}{r}\right)dt
 \end{align*}
 
-\item
+\item We know that velocity is given by the time derivative of the position, $v=dr/dt$. Inserting the above relation between proper time and far-away time we find
+
+\[\frac{dr}{dt}=\frac{dr}{\frac{d\tau}{1-\frac{2M}{r}}}=\left(1-\frac{2M}{r}\right)\frac{dr}{d\tau}\]
+
+We know that the square of the proper time is equal to the Schwazschild line element \ref{eq:schwarzschild}. Hence we square our expression an insert the line element (notice that since the object begins with velocity $v=0$, it will only move in the radial direction).
 
 \begin{align*}
-\left(\frac{dr}{dt}\right)^{2}&=\left(\frac{dr}{\frac{d\tau}{1-\frac{2M}{r}}}\right)^{2}=\left(1-\frac{2M}{r}\right)^{2}\frac{dr^{2}}{\left(1-\frac{2M}{r}\right)dt^{2}-\frac{dr^{2}}{1-\frac{2M}{r}}}\\
-&=\left(1-\frac{2M}{r}\right)\frac{dr^{2}}{dt^{2}-\frac{dr^{2}}{\left(1-\frac{2M}{r}\right)^{2}}}=\left(1-\frac{2M}{r}\right)\frac{dr^{2}/dt^{2}}{1-\frac{dr^{2}/dt^{2}}{\left(1-\frac{2M}{r}\right)^{2}}}\\
+\left(\frac{dr}{dt}\right)^{2}&=\left[\left(1-\frac{2M}{r}\right)\frac{dr}{d\tau}\right]^{2}=\left(1-\frac{2M}{r}\right)^{2}\frac{dr^{2}}{\left(1-\frac{2M}{r}\right)dt^{2}-\frac{dr^{2}}{1-\frac{2M}{r}}}\\
+&=\left(1-\frac{2M}{r}\right)\frac{dr^{2}}{dt^{2}-\frac{dr^{2}}{\left(1-\frac{2M}{r}\right)^{2}}}=\left(1-\frac{2M}{r}\right)\frac{dr^{2}/dt^{2}}{1-\frac{dr^{2}/dt^{2}}{\left(1-\frac{2M}{r}\right)^{2}}}
+\end{align*}
+
+To reduce the length of the calculation, we introduce the following variables: $\nu=\frac{dr}{dt}$ and $\alpha=1-\frac{2M}{r}$.
+
+\begin{align*}
 \nu^{2}&=\alpha\frac{\nu^{2}}{1-\frac{\nu^{2}}{\alpha^{2}}}=\frac{\alpha^{3}}{\frac{\alpha^{2}}{\nu^{2}}-1}\\
 \nu^{2}\left(\frac{\alpha^{2}}{\nu^{2}}-1\right)&=\alpha^{3}\\
 \alpha^{2}-\nu^{2}&=\alpha^{3}\\
@@ -454,19 +466,18 @@ d\tau=\left(1-\frac{2M}{r}\right)dt
 \left(\frac{dr}{dt}\right)^{2}&=\left(1-\frac{2M}{r}\right)^{2}\left[1-\left(1-\frac{2M}{r}\right)\right]=\left(1-\frac{2M}{r}\right)^{2}\frac{2M}{r}
 \end{align*}
 
-\item Velocity is the change in position over the change of time, in other words, $v=\frac{dr}{dt}$. Hence we have 
+\item We know that velocity is the time derivative of the position. Since $r$ and $t$ is the position and time measured by the far-away observer respectively, we know that the velocity measured by the far-away observer must be given by $v=\pm\sqrt{(dr/dt)^{2}}$. Since the object is moving towards the central mass, that is away from the far-away observer, the velocity is given by
 
 \begin{equation*}
-v=\pm\sqrt{\left(\frac{dr}{dt}\right)^{2}}=\pm\sqrt{\left(1-\frac{2M}{r}\right)^{2}\frac{2M}{r}}=-\left(1-\frac{2M}{r}\right)\sqrt{\frac{2M}{r}}
+v=-\sqrt{\left(\frac{dr}{dt}\right)^{2}}=-\sqrt{\left(1-\frac{2M}{r}\right)^{2}\frac{2M}{r}}=-\left(1-\frac{2M}{r}\right)\sqrt{\frac{2M}{r}}
 \end{equation*}
 
-The minus sign comes from the fact that the spaceship is traveling towards the black hole.
 
-\item We have in the lecture notes derived equation \ref{eq:shell_time} and \ref{eq:shell_length} as the transformation between shell and far-away observers. Hence
+\item We now want to find the velocity that a shell observer would measure. We have in the lecture notes derived equation \ref{eq:shell_time} and \ref{eq:shell_length} as the transformation of time and length between shell and far-away observers. Hence
 
-\begin{equation}
-v_{\text{shell}}=\frac{dr_{\text{shell}}}{dt_{\text{shell}}}=\frac{\frac{dr}{\sqrt{1-\frac{2M}{r}}}}{dt\sqrt{1-\frac{2M}{r}}}=\frac{-\left(1-\frac{2M}{r}\right)\sqrt{\frac{2M}{r}}}{1-\frac{2M}{r}}=-\sqrt{\frac{2M}{r}}
-\end{equation}
+\begin{equation*}
+v_{\text{shell}}=\frac{dr_{\text{shell}}}{dt_{\text{shell}}}=\frac{\frac{dr}{\sqrt{1-\frac{2M}{r}}}}{dt\sqrt{1-\frac{2M}{r}}}=\frac{dr/dt}{\left(\sqrt{1-\frac{2M}{r}}\right)^{2}}=\frac{-\left(1-\frac{2M}{r}\right)\sqrt{\frac{2M}{r}}}{1-\frac{2M}{r}}=-\sqrt{\frac{2M}{r}}
+\end{equation*}
 
 
 \end{enumerate}
@@ -481,33 +492,48 @@ v_{\text{shell}}=\frac{dr_{\text{shell}}}{dt_{\text{shell}}}=\frac{\frac{dr}{\sq
 \addcontentsline{toc}{section}{Exercise 2C.5}
 \section*{Exercise 2C.5}
 
+In this exercise we will study a spaceship traveling into a black hole, passing a satellite at $1\,AU$. It sends out a signal with on a fixed time interval to the satellite, and the satellite is sending signals on a fixed time interval to the spaceship. We are interested in seeing how the black hole effects these time intervals. We will for simplicity dissregard the time the light use to travel from the spaceship to the satellite (and the other direction). 
+
 \begin{enumerate}
 
-\item The satellite positioned at $1\,AU$ from the black hole will be the shell observer and the \textquote{falling} spaceship will be the freely falling observer.
+\item The satellite positioned at $1\,AU$ from the black hole will be the shell observer, since it does not move in radial position (and we will disregad any angualr movement), and the \textquote{falling} spaceship will be the freely falling observer.
 
 \item The equation for conservation of energy \ref{eq:E/m} and the tranformation between shell and far-away observers time \ref{eq:shell_time} tells us 
 
 \begin{equation*}
-\frac{E}{m}=\left(1-\frac{2M}{r}\right)dt\frac{1}{d\tau}=\left(1-\frac{2M}{r}\right)\frac{dt_{\text{shell}}}{\sqrt{1-\frac{2M}{r}}}\frac{1}{d\tau}={\sqrt{1-\frac{2M}{r}}}\frac{dt_{\text{shell}}}{d\tau}={\sqrt{1-\frac{2M}{r}}}\gamma_{\text{shell}}
+\frac{E}{m}=\left(1-\frac{2M}{r}\right)dt\frac{1}{d\tau}=\left(1-\frac{2M}{r}\right)\frac{dt_{\text{shell}}}{\sqrt{1-\frac{2M}{r}}}\frac{1}{d\tau}={\sqrt{1-\frac{2M}{r}}}\frac{dt_{\text{shell}}}{d\tau}
 \end{equation*}
 
+For a short ammount of time when the spaceship passes the satellite, we may use that the satellite is in an inertial frame. Thus we can think of the satellite as the lab frame and the spaceship as the moving frame having constant velocity $v_{\text{shell}}$. We are then also allowed to use the Lorentz transformation 
 
-\item (Check $\ldots$ for solution)
+\[t_{\text{shell}}=v_{\text{shell}}\gamma_{\text{shell}}x_{\text{ship}}+\gamma_{\text{shell}}t_{\text{ship}},\]
 
-\item 
+where $\gamma_{\text{shell}}=1/\sqrt{1-v_{\text{shell}}^{2}}$. Note that measuring the movement of the spaceship. Hence $x_{\text{ship}}=0$, since the observer on the spaceship does not measure that he moves. Thus we have
+
+\[\frac{dt_{\text{shell}}}{d\tau}=\frac{\overbrace{v_{\text{shell}}\gamma_{\text{shell}}dx_{\text{ship}}}^{=0}+\gamma_{\text{shell}}dt_{\text{ship}}}{dt_{\text{ship}}}=\gamma_{\text{shell}}\]
+
+This relation then gives us the following expression for the energy per mass:
+
+\begin{equation*}
+\frac{E}{m}=\sqrt{1-\frac{2M}{r}}\frac{dt_{\text{shell}}}{d\tau}={\sqrt{1-\frac{2M}{r}}}\gamma_{\text{shell}}
+\end{equation*}
+
+\item To find the energy per mass we just need to insert numbers (Check $\ldots$ for solution).
+
+\item The conservation law for energy \ref{eq:E/m} gives a relation between proper and far-away time.
 
 \begin{align*}
 \frac{E}{m}&=\left(1-\frac{2M}{r}\right)\frac{dt}{d\tau}\\
 d\tau&=\frac{1-\frac{2M}{r}}{E/m}dt
 \end{align*}
 
-\item 
+\item As in task 2, we use equation \ref{eq:shell_time} to transforme between shell and far-away time and get
 
 \begin{equation*}
 d\tau=\frac{1-\frac{2M}{r}}{E/m}dt=\frac{1-\frac{2M}{r}}{E/m}\frac{dt_{\text{shell}}}{\sqrt{1-\frac{2M}{r}}}=\frac{1-\frac{2M}{r}}{E/m}\frac{dt_{\text{shell}}}{\sqrt{1-\frac{2M}{r}}}=\frac{\sqrt{1-\frac{2M}{r}}}{E/m}dt_{\text{shell}}
 \end{equation*}
 
-\item 
+\item Finally we will solve with respect to the distance $r$ from the central mass.
 
 \begin{align*}
 d\tau&=\frac{\sqrt{1-\frac{2M}{r}}}{E/m}dt_{\text{shell}}\\
@@ -515,11 +541,11 @@ d\tau&=\frac{\sqrt{1-\frac{2M}{r}}}{E/m}dt_{\text{shell}}\\
 r&=\frac{2M}{1-\left(\frac{d\tau}{dt_{\text{shell}}}E/m\right)^{2}}
 \end{align*}
 
-(Check $\ldots$ for solution) 
+The rest is just inserting numbers (Check $\ldots$ for solution).
 
-\item (Check $\ldots$ for solution) 
+\item Insert the time differences into the pervious equation (Check $\ldots$ for solution).
 
-\item We know $d\tau=\frac{\sqrt{1-\frac{2M}{r}}}{E/m}dt_{\text{shell}}$, so when $r\to2M$, $d\tau\to0$ and $dt_{\text{shell}}\to\infty$. That is, the time difference increases for the shell observer and decreases for the freely falling observer.
+\item We know $d\tau=\frac{\sqrt{1-\frac{2M}{r}}}{E/m}dt_{\text{shell}}$, so when $r\to2M$, we see that $d\tau\to0$. That is, the time difference between the signals decreases for the freely falling observer. For the shell observer $dt_{\text{shell}}\to\infty$, thus the time difference between the signals increases for the shell observer.
 
 \item When we get to close to the Schwarzschild horizon, we will see all of time passing by. This means that the signals from the shell observer will end up as a constant signal, just as in the video.
 
@@ -535,28 +561,35 @@ r&=\frac{2M}{1-\left(\frac{d\tau}{dt_{\text{shell}}}E/m\right)^{2}}
 \addcontentsline{toc}{section}{Exercise 2C.6}
 \section*{Exercise 2C.6}
 
+In this exercise we will find relations between proper time and the main variables in the Schwarzschild line element \ref{eq:schwarzschild}, $\Delta t$, $\Delta \phi$ and $\Delta r$, using the relativistic conservation laws.
+
 \begin{enumerate}
 
-\item Using consevation of energy \ref{eq:E/m}
+\item We begin by finding a relation between proper time and far-away time. Using consevation of energy \ref{eq:E/m} we easily find
 
 \begin{align*}
 \frac{E}{m}&=\left(1-\frac{2M}{r}\right)\frac{\Delta t}{\Delta\tau}\\
 \Delta t&=\frac{E/m}{1-\frac{2M}{r}}\Delta\tau
 \end{align*}
 
-\item Using consevation of angular momentum \ref{eq:L/m}
+\item Finding the relation between proper time and angular position measured by a far-away observer is also easy. Using consevation of angular momentum \ref{eq:L/m} we find
 
 \begin{align*}
 \frac{L}{m}&=r^{2}\frac{\Delta\phi}{\Delta\tau}\\
 \Delta\phi&=\frac{L/m}{r^{2}}\Delta\tau
 \end{align*}
 
-\item Using \ref{eq:schwarzschild} we find
+\item We now have every thing we need to find a relation between proper time and difference in radial position measured by a far-away observer. Using that the square of proper time is equal to the Schwarzschild line element \ref{eq:schwarzschild} we find
 
 \begin{align*}
 \Delta\tau^{2}&=\Delta s^{2}=\left(1-\frac{2M}{r}\right)\Delta t^{2}-\frac{\Delta r^{2}}{1-\frac{2M}{r}}-r^{2}\Delta\phi^{2}\\
 &=\left(1-\frac{2M}{r}\right)\left(\frac{E/m}{1-\frac{2M}{r}}\Delta\tau\right)^{2}-\frac{\Delta r^{2}}{1-\frac{2M}{r}}-r^{2}\left(\frac{L/m}{r^{2}}\Delta\tau\right)^{2}\\
-&=\frac{(E/m)^{2}}{1-\frac{2M}{r}}\Delta\tau^{2}-\frac{\Delta r^{2}}{1-\frac{2M}{r}}-\frac{(L/m)^{2}}{r^{2}}\Delta\tau^{2}\\ \\
+&=\frac{(E/m)^{2}}{1-\frac{2M}{r}}\Delta\tau^{2}-\frac{\Delta r^{2}}{1-\frac{2M}{r}}-\frac{(L/m)^{2}}{r^{2}}\Delta\tau^{2}
+\end{align*}
+
+The rest is just solving for the distance $r$:
+
+\begin{align*}
 \left(1-\frac{2M}{r}\right)\Delta\tau^{2}&=(E/m)^{2}\Delta\tau^{2}-\Delta r^{2}-\left(1-\frac{2M}{r}\right)\frac{(L/m)^{2}}{r^{2}}\Delta\tau^{2}\\
 \Delta r^{2}&=(E/m)^{2}\Delta\tau^{2}-\left(1-\frac{2M}{r}\right)\frac{(L/m)^{2}}{r^{2}}\Delta\tau^{2}-\left(1-\frac{2M}{r}\right)\Delta\tau^{2}\\
 &=\left((E/m)^{2}-\left[\frac{(L/m)^{2}}{r^{2}}+1\right]\left(1-\frac{2M}{r}\right)\right)\Delta\tau^{2}\\
@@ -575,10 +608,21 @@ r&=\frac{2M}{1-\left(\frac{d\tau}{dt_{\text{shell}}}E/m\right)^{2}}
 \addcontentsline{toc}{section}{Exercise 2C.7}
 \section*{Exercise 2C.7}
 
+In this exercise we will study how the crew on an airplane age compared to people on the ground.
+
 \begin{enumerate}
 
-\item 
+\item We want to show that we have the relation 
 
+\[\frac{\Delta\tau}{\Delta t_{\text{earth}}}=\sqrt{\frac{1-\frac{2M}{r+\Delta r}-v_{\text{plane}}^{2}}{1-\frac{2M}{r}-v_{\text{earth}}^{2}}},\]
+
+where $\Delta\tau$ is the proper time of the airplane crew, $\Delta t_{\text{Earth}}$ is the time on Earth clocks, $M$ is the mass of the Earth in meters, $r$ is the radius of the Earth, $\Delta r$ is the distance from the surface of the Earth and to the plane, $v_{\text{plane}}$ is the angular velocity of the plane with respect to the center of Earth and $v_{\text{Earth}}$ is the rotational velocity of Earth.
+\\
+\\
+Since both observers can be thought of as shell observers, we begin by relating their shell time to the far-away time. We look at to events so close (to the two shell observers and) to each other in space-time that the line element for both shell observers becomes
+\\ \\ 
+\textbf{Må vente med denne!!!!!!!!!!!!!!!!!!!!}
+\\ \\
 \begin{align*}
 \Delta\tau^{2}&=\Delta (s^{\prime})^{2}=\left(1-\frac{2M}{r+\Delta r}\right)\Delta t^{2}-\frac{\overbrace{\Delta r^{2}}^{=0}}{1-\frac{2M}{r+\Delta r}}-(r+\Delta r)^{2}\Delta\phi^{2}_{\text{plane}}\\
 &=\left(1-\frac{2M}{r+\Delta r}\right)-(r+\Delta r)^{2}\frac{\Delta\phi^{2}_{\text{plane}}}{\Delta t^{2}}=1-\frac{2M}{r+\Delta r}-v_{\text{plane}}^{2}
@@ -593,15 +637,16 @@ r&=\frac{2M}{1-\left(\frac{d\tau}{dt_{\text{shell}}}E/m\right)^{2}}
 \frac{\Delta\tau}{\Delta t_{\text{earth}}}=\sqrt{\frac{1-\frac{2M}{r+\Delta r}-v_{\text{plane}}^{2}}{1-\frac{2M}{r}-v_{\text{earth}}^{2}}}
 \end{equation*}
 
-\item We can change units with equations \ref{eq:kg_to_m} and \ref{eq:s_to_m}. This gives
+\item The equation we found above might give numerical errors because of small numbers. We will therefore try to justify a Taylor expansion. To do this we need to argue that the values of $M/r$, $v_{\text{plane}}$ and $v_{\text{Earth}}$ are small enough. Mass and radius of the Earth are given constants, and $v_{\text{plane}}$ is given in the exercise. We will use Earth's period to determin $v_{\text{Earth}}$ (remember that $v=\Delta x/\Delta t=(2\pi r)/(\text{one day})$). Using equations \ref{eq:kg_to_m} and \ref{eq:s_to_m} to change into our relativistic units we find
 
 \begin{align*}
 M_{m}&=\frac{G}{c^{2}}M_{kg}=\frac{6.67408\cdot10^{-11}\,\frac{m^{3}}{kg\,s^{2}}}{(299\,792\,458\,m/s)^{2}}5.972\cdot10^{24}\,kg\approx4.435\cdot10^{-3}\,m\\
 \frac{M_{m}}{r}&=\frac{4.435\cdot10^{-3}\,m}{6371\cdot10^{3}\,m}\approx6.961\cdot10^{-10}\\
 v_{\text{plane}}&=\frac{1000/3.6}{c}\approx9.267\cdot10^{-7}\\
-v_{\text{Earth}}&=\frac{2\pi\cdot6371\cdot10^{3}}{24\cdot60\cdot60}\frac{1}{c}\approx1.545\cdot10^{-6}
+v_{\text{Earth}}&=\frac{2\pi\cdot\overbrace{6371\cdot10^{3}}^{r_{\text{Earth}}}}{\underbrace{24\cdot60\cdot60}_{\text{one day}}}\frac{1}{c}\approx1.545\cdot10^{-6}
 \end{align*}
 
+These values are so small that we can justify a Taylor expansion.
 
 \item We choose $x=-\left(\frac{2M}{r+\Delta r}+v_{\text{plane}}^{2}\right)$ and $y=-\left(\frac{2M}{r}+v_{\text{earth}}^{2}\right)$. We can now create a Taylor expansion of $f(x)=\sqrt{1+x}$ and $g(y)=\frac{1}{\sqrt{1+y}}$.
 
@@ -619,7 +664,7 @@ The Taylor expansion thus becomes $f(x)\approx T_{1}f(x)=f(0)+xf^{\prime}(0)=1+\
 &=1+\frac{1}{2}\left[v_{\text{earth}}^{2}-v_{\text{plane}}^{2}\right]+M\left[\frac{1}{r}-\frac{1}{r+\Delta r}\right]
 \end{align*}
 
-\item 
+\item We can now put in numbers to see the difference in age.
 
 \begin{align*}
 \frac{d\tau}{dt}&=1+\frac{1}{2}\left[v_{\text{earth}}^{2}-v_{\text{plane}}^{2}\right]+M\left[\frac{1}{r}-\frac{1}{r+\Delta r}\right]\\
@@ -628,7 +673,7 @@ The Taylor expansion thus becomes $f(x)\approx T_{1}f(x)=f(0)+xf^{\prime}(0)=1+\
 
 The differance is of order $10^{-12}$, so almost nothing at all.
 
-\item The difference is barely anything. A better reason would be to save the environment.
+\item The difference is barely anything. Hence this is not a good reason not to fly. A better reason would be to save the environment.
 
 \end{enumerate}
 
@@ -642,73 +687,39 @@ The differance is of order $10^{-12}$, so almost nothing at all.
 \addcontentsline{toc}{section}{Exercise 2C.8}
 \section*{Exercise 2C.8}
 
+In this exercise we will see how a GPS works. We will only look at a system with two satellites, thus we will only be able to find our $x$- and $y$-position.
+
 \begin{enumerate}
 
-\item 
+\item First we need to find out at what radius the satellites orbits. You should know from courses on vector calculus and linear algebra that the length of a 2-dimentional vector is
 
-\[|\vec{r}|=\sqrt{x^{2}+y^{2}}\]
+\[|\vec{r}|=\sqrt{x^{2}+y^{2}},\]
 
-\item We remember Keplers' 2. law as 
+where $\vec{r}=\begin{bmatrix}x\\y\end{bmatrix}$ is a position vector containing $x$- and $y$-position. We insert numbers to find the hight of the orbit of the satellites (check $\ldots$ for solution).
+
+\item Further we need the velocity of the satellites. From the lectrue note on celest mechanics we remember Keplers' 2. law 
 
 \begin{equation}\label{eq:kepler}
-P^{2}=\frac{4\pi^{2}}{G\underbrace{m_{1}+m_{2}}_{=M}}a^{3}
+P^{2}=\frac{4\pi^{2}}{Gm_{1}+m_{2}}a^{3},
 \end{equation}
 
-If we assume circular motion (that is $a=r$) and use that the period of the satellites orbits can be written as $P=t=\frac{s}{v}=\frac{2\pi r}{v_{\theta}}$, equation \ref{eq:kepler} becomes
+where $P$ is the period of the satellite, $G$ is the gravitational constant, $m_{1}$ and $m_{2}$ is the mass of the two objects and $a$ is the semimajor axis of the elliptical orbit.
+\\
+\\
+If we assume circular motion (that is $a=r+\Delta r$) and use that the period of the satellites orbits can be written as $P=t=\frac{s}{v}=\frac{2\pi (r+\Delta r)}{v_{\theta}}$, equation \ref{eq:kepler} becomes
 
 \begin{align*}
-\left(\frac{2\pi r}{v_{\theta}}\right)^{2}&=\frac{4\pi^{2}r^{3}}{GM}\\
-2\pi r&=\pm2\pi r\sqrt{\frac{r}{GM}}v_{\theta}\\
-v_{\theta}&=\pm\sqrt{\frac{GM}{r}}
+\left(\frac{2\pi (r+\Delta r)}{v_{\theta}}\right)^{2}&=\frac{4\pi^{2}(r+\Delta r)^{3}}{G(m_{1}+m_{2})}\\
+2\pi (r+\Delta r)&=\pm2\pi (r+\Delta r)\sqrt{\frac{r+\Delta r}{G(m_{1}+m_{2})}}v_{\theta}\\
+v_{\theta}&=\pm\sqrt{\frac{G(m_{1}+m_{2})}{r+\Delta r}}
 \end{align*}
 
-\item \textbf{Trenger figur}
+Since the mass of the Earth is much greater than that of a satellite, we can assume $(m_{1}+m_{2})=M$. Hence we are left with
 
-Law of cosine:
+\[v_{\theta}=\pm\sqrt{\frac{GM}{r+\Delta r}}\]
 
-\begin{equation}
-C^{2}=A^{2}+B^{2}-AB\cos{\theta}
-\end{equation}
+We insert numbers to find the satellites orbital velocities (check $\ldots$ for solution).
 
-\begin{align*}
-\vec{r}_{\text{sat}}=\begin{vmatrix}x_{\text{sat}}\\y_{\text{sat}}\end{vmatrix} &&\text{and}&& \vec{r}=\begin{vmatrix}x\\y\end{vmatrix} &&\Rightarrow&& \vec{r}_{\text{sat}}-\vec{r}=\begin{vmatrix}x_{\text{sat}}-x\\y_{\text{sat}}-y\end{vmatrix}
-\end{align*}
-
-\begin{align*}
-(c\Delta t)^{2}&=|\vec{r}_{\text{sat}}-\vec{r}|^{2}=|\vec{r}|^{2}+|\vec{r}_{\text{sat}}|^{2}-2|\vec{r}||\vec{r}_{\text{sat}}|\cos{\alpha}\\
-\alpha&=\arccos{\left(\frac{|\vec{r}|^{2}+|\vec{r}_{\text{sat}}|^{2}-(c\Delta t)^{2}}{2|\vec{r}||\vec{r}_{\text{sat}}|}\right)}
-\end{align*}
-
-\begin{align*}
-\tan{\theta}=\frac{y_{\text{sat}}}{x_{\text{sat}}} \Rightarrow \theta=\arctan{\left(\frac{y_{\text{sat}}}{x_{\text{sat}}}\right)}
-\end{align*}
-
-%|vec{r}_{\text{sat}}-\vec{r}|^{2}=(x_{\text{sat}}-x)^{2}+(y_{\text{sat}}-y)^{2}
-
-\item 
-
-\begin{align*}
-\Delta t_{\text{sat}}^{2}&=\Delta (s^{\prime})^{2}=\left(1-\frac{2M}{|\vec{r}_{\text{sat}}|}\right)\Delta t^{2}-\frac{\overbrace{\Delta r^{2}}^{=0}}{1-\frac{2M}{|\vec{r}_{\text{sat}}|}}-|\vec{r}_{\text{sat}}|^{2}\Delta\theta^{2}_{\text{sat}}\\
-&=\left(1-\frac{2M}{|\vec{r}_{\text{sat}}|}\right)-|\vec{r}_{\text{sat}}|^{2}\frac{\Delta\theta^{2}_{\text{sat}}}{\Delta t^{2}}=1-\frac{2M}{|\vec{r}_{\text{sat}}|}-v_{\text{sat}}^{2}
-\end{align*}
-
-\begin{align*}
-\Delta t_{\text{earth}}^{2}&=\Delta s^{2}=\left(1-\frac{2M}{|r|}\right)\Delta t^{2}-\frac{\overbrace{\Delta r^{2}}^{=0}}{1-\frac{2M}{|r|}}-r^{2}\Delta\phi^{2}_{\text{earth}}\\
-&=\left(1-\frac{2M}{|r|}\right)-|r|^{2}\frac{\Delta\phi^{2}_{\text{earth}}}{\Delta t^{2}}=1-\frac{2M}{r}-v_{\text{earth}}^{2}
-\end{align*}
-
-\begin{equation*}
-\frac{\Delta t_{\text{sat}}}{\Delta t_{\text{earth}}}=\sqrt{\frac{1-\frac{2M}{|\vec{r}_{\text{sat}}|}-v_{\text{sat}}^{2}}{1-\frac{2M}{|r|}-v_{\text{earth}}^{2}}}
-\end{equation*}
-
-\item (Check $\ldots$ for solution)
-
-\item (Check $\ldots$ for solution)
-
-\item The more time that passes, the more wrong the expression $|\vec{r}_{\text{sat}}-r|=c\Delta t$ becomes since $\Delta t$ is wrong. After a couple of days, the GPS will be totaly useless and just give wrong positions.
-
-\end{enumerate}
-\newpage
 
 
 \begin{figure}[ht]
@@ -736,11 +747,86 @@ C^{2}=A^{2}+B^{2}-AB\cos{\theta}
 \draw[black!45!white, dashed, variable=\x, domain=0:90, smooth, samples=45] plot (\x:3);
 \draw node at (80:3.2) {\footnotesize Surface};  
 \end{tikzpicture}}
-\caption{en Hei}
+\caption{An illustration of the GPS exercise.}
+\label{fig:GPS}
 \end{figure}
 
 
 
+
+
+
+\item Now comes the fun part. We want to find our own position on the planet. We will use figure \ref{fig:GPS} as a guide.
+\\
+We define the two following vectors: a satellite's position with respect to the center of the Earth, $\textbf{r}_{\text{sat}}$, and our position with respect to the center of the Earth, $\textbf{r}$. These two vectors can be given as
+
+\begin{align*}
+\textbf{r}_{\text{sat}}=\begin{bmatrix}x_{\text{sat}}\\y_{\text{sat}}\end{bmatrix} &&\text{and}&& \textbf{r}=\begin{bmatrix}x\\y\end{bmatrix},
+\end{align*}
+
+where $x_{\text{sat}}$ and $x$ is the $x$-position of the satellite and us respectively, and $y_{\text{sat}}$ and $y$ is the $y$-position of the satellite and us respectively. The satellites' positions are known, but only the length of our position vector is known, $|\textbf{r}|=r_{\text{Earth}}$. Hence we need some trigonometric properties to find our position.
+\\
+If we knew the angles $\alpha$ and $\theta$ in figure \ref{fig:GPS}, it would be easy to find our position. You should remember from the law of cosine from highschool (which is valid for any triangle):
+
+\begin{equation}
+C^{2}=A^{2}+B^{2}-AB\cos{\alpha}
+\end{equation}
+
+Using the law of cosine on the triangle created by $|\textbf{r}_{\text{sat}}|$, $|\textbf{r}|$ and $|\textbf{r}_{\text{sat}}-\textbf{r}|$ we find (notice in figure \ref{fig:GPS} that $|\textbf{r}_{\text{sat}}-\textbf{r}|=c\Delta t$)
+
+\begin{align*}
+(c\Delta t)^{2}&=|\textbf{r}_{\text{sat}}-\textbf{r}|^{2}=|\textbf{r}|^{2}+|\textbf{r}_{\text{sat}}|^{2}-2|\textbf{r}||\textbf{r}_{\text{sat}}|\cos{\alpha}\\
+\alpha&=\arccos{\left(\frac{|\textbf{r}|^{2}+|\textbf{r}_{\text{sat}}|^{2}-(c\Delta t)^{2}}{2|\textbf{r}||\textbf{r}_{\text{sat}}|}\right)}
+\end{align*}
+
+We can now insert numbers to find the angle $\alpha$.
+\\
+Next we wanted to know the angle $\theta$. The definition of tangent is
+
+\begin{align*}
+\tan{\theta}=\frac{y_{\text{sat}}}{x_{\text{sat}}} \Rightarrow \theta=\arctan{\left(\frac{y_{\text{sat}}}{x_{\text{sat}}}\right)}
+\end{align*}
+
+Again, we insert numbers to find the value of the angle $\theta$. \textbf{FORKLAR hvilken vinkel man skal bruke}
+\\
+Figure \ref{fig:GPS} tells us that $\phi=\theta-\alpha$. To find our position we use the definition of sine and cosine:
+
+\begin{align*}
+\cos{\phi}&=\frac{x}{|\textbf{r}|} &&\Rightarrow&& x=|\textbf{r}|\cos{\phi}\\
+\sin{\phi}&=\frac{y}{|\textbf{r}|} &&\Rightarrow&& y=|\textbf{r}|\sin{\phi}
+\end{align*}
+
+We insert numbers to find our position (check $\ldots$ for solution).
+%\begin{align*}
+%\vec{r}_{\text{sat}}=\begin{vmatrix}x_{\text{sat}}\\y_{\text{sat}}\end{vmatrix} &&\text{and}&& \vec{r}=\begin{vmatrix}x\\y\end{vmatrix} &&\Rightarrow&& \vec{r}_{\text{sat}}-\vec{r}=\begin{vmatrix}x_{\text{sat}}-x\\y_{\text{sat}}-y\end{vmatrix}
+%\end{align*}
+%|vec{r}_{\text{sat}}-\vec{r}|^{2}=(x_{\text{sat}}-x)^{2}+(y_{\text{sat}}-y)^{2}
+
+\item In the deduction above we made a fatal error. We assumed that $|\textbf{r}_{\text{sat}}-\textbf{r}|=c\Delta t$. Here we assumed that $\Delta t=t_{\text{Earth}}-t_{\text{sat}}$, where $t_{\text{sat}}$ is the time the satellite sent out the signal and $t_{\text{Earth}}$ is the time when we recived the signal. Here we have not taken relativistic effects into account, thus we should get a wrong answer.
+\\
+We therefore need to find an the actual time that the light uses to reach us. We will use the same method as in the lecture note and in exercise 2C.7. It will therefore be a much shorter explenation here.
+
+\begin{align*}
+\Delta t_{\text{sat}}^{2}&=\Delta (s^{\prime})^{2}=\left(1-\frac{2M}{|\textbf{r}_{\text{sat}}|}\right)\Delta t^{2}-\frac{\overbrace{\Delta r^{2}}^{=0}}{1-\frac{2M}{|\textbf{r}_{\text{sat}}|}}-|\textbf{r}_{\text{sat}}|^{2}\Delta\theta^{2}_{\text{sat}}\\
+&=\left(1-\frac{2M}{|\textbf{r}_{\text{sat}}|}\right)-|\textbf{r}_{\text{sat}}|^{2}\frac{\Delta\theta^{2}_{\text{sat}}}{\Delta t^{2}}=1-\frac{2M}{|\textbf{r}_{\text{sat}}|}-v_{\text{sat}}^{2}
+\end{align*}
+
+\begin{align*}
+\Delta t_{\text{earth}}^{2}&=\Delta s^{2}=\left(1-\frac{2M}{|\textbf{r}|}\right)\Delta t^{2}-\frac{\overbrace{\Delta r^{2}}^{=0}}{1-\frac{2M}{|\textbf{r}|}}-r^{2}\Delta\phi^{2}_{\text{earth}}\\
+&=\left(1-\frac{2M}{|\textbf{r}|}\right)-|\textbf{r}|^{2}\frac{\Delta\phi^{2}_{\text{earth}}}{\Delta t^{2}}=1-\frac{2M}{|\textbf{r}|}-v_{\text{earth}}^{2}
+\end{align*}
+
+\begin{equation*}
+\frac{\Delta t_{\text{sat}}}{\Delta t_{\text{earth}}}=\sqrt{\frac{1-\frac{2M}{|\textbf{r}_{\text{sat}}|}-v_{\text{sat}}^{2}}{1-\frac{2M}{|\textbf{r}|}-v_{\text{earth}}^{2}}}
+\end{equation*}
+
+\item (Check $\ldots$ for solution)
+
+\item (Check $\ldots$ for solution)
+
+\item The more time that passes, the more wrong the expression $|\textbf{r}_{\text{sat}}-\textbf{r}|=c\Delta t$ becomes since $\Delta t$ is wrong. After a couple of days, the GPS will be totaly useless and just give wrong positions.
+
+\end{enumerate}
 
 
 \end{document}
