@@ -57,7 +57,7 @@
         
 
 \begin{document}
-\title{Solutions to exercise in part 2C}
+\title{Solutions to exercises in part 2C}
 %\author{Johan Andreas Fløisand}
 \date{}
 \maketitle
@@ -71,9 +71,9 @@
 The following constants may be used:
 \begin{itemize}
 \item Mass of the Earth:      $M_{\text{Earth}}=5.972\cdot10^{24}\,kg$ 
-\item Mass of the sun:        $M_{\text{sun}}=1.989\cdot10^{30}\,kg$
+\item Mass of the Sun:        $M_{\text{Sun}}=1.989\cdot10^{30}\,kg$
 \item Radius of the Earth:    $r_{\text{Earth}}=6371\,km$
-\item Radius of the sun:      $r_{\text{sun}}=695\,508\,km$
+\item Radius of the Sun:      $r_{\text{Sun}}=695\,508\,km$
 \item Speed of light:         $c=299\,792\,458\,m/s$
 \item Gravitational constant: $G=6.67408\cdot10^{-11}\,\frac{m^{3}}{kg\,s^{2}}$
 \end{itemize}
@@ -85,7 +85,8 @@ The Schwawrzschild line element is given by:
 \Delta s^{2}=\left(1-\frac{2M}{r}\right)\Delta t^{2}-\frac{\Delta r^{2}}{1-\frac{2M}{r}}-r^{2}\Delta\phi^{2},
 \end{equation}
 
-where $M$ is the mass of the central mass at $r=0$ (usually a black hole, a star or a planet), $r$ is the Schwarzschild radius (see lecture note 2C if you do not remember this), $\Delta t$ is the difference in time, $\Delta r$ is the difference in radial position and $\Delta\phi$ is the difference in the angular position between two events.
+where $M$ is the mass of the central mass %at $r=0$ 
+(usually a black hole, a star or a planet), $r$ is the Schwarzschild radius (see lecture note 2C if you do not remember this), $\Delta t$ is the difference in time, $\Delta r$ is the difference in radial position and $\Delta\phi$ is the difference in the angular position between two events.
 \\
 This equation tells us that the intervall $\Delta s^{2}$ between two events is allways equal for all frames of referance.
 \\
@@ -93,25 +94,25 @@ This equation tells us that the intervall $\Delta s^{2}$ between two events is a
 If we are dealing with a local inertial frame (see lecture note 2C if you do not remember what this is), we are allowed to use the Lorentz line element:
 
 \begin{equation}\label{eq:lorentz}
-\Delta s^{2}=\Delta t^{2}-\Delta x^{2}=\Delta t^{2}-\Delta r^{2}-r^{2}\Delta\phi^{2},
+\Delta s^{2}=\Delta t^{2}-\Delta x^{2}-\Delta y^{2}=\Delta t^{2}-\Delta r^{2}-r^{2}\Delta\phi^{2},
 \end{equation}
 
-where $\Delta x$ is the difference in $x$-position and all other variables are the same as in the Schwarzschild line element. As above, $\Delta s^{2}$ between two events is equal for all observers.
+where $\Delta x$ and $\Delta y$ is the difference in $x$- and $y$-position and all other variables are the same as in the Schwarzschild line element. As above, $\Delta s^{2}$ between two events is equal for all observers.
 
 
 \subsection*{Change of units}
 
-In the theory of relativity we will use natural unit. That is, we want to measure time and mass in meters. We converte between mass in kilos and meters as follows:
+In the theory of relativity we will use natural unit. That is, we want to measure time and mass in meters. We converte mass in kilos into meters we do the following:
 
 \begin{equation}\label{eq:kg_to_m}
 \frac{M_{m}}{M_{kg}}=\frac{G}{c^{2}}\left(\approx\frac{6.67408\cdot10^{-11}\,m^{3}kg^{-1}s^{-2}}{(299\,792\,458\,m/s)^{2}}\approx7.4259\cdot10^{-28}\right)
 \end{equation}
 
-Here $M_{m}$ and $M_{kg}$ the mass of the object in question in meters and kilos respectively, $G$ is the gravitational constant and $c$ is the speed of light.
+Here $M_{m}$ and $M_{kg}$ the mass of the object in meters and kilos respectively, $G$ is the gravitational constant and $c$ is the speed of light.
 %$\frac{G}{c^{2}}\approx\frac{6.67408\cdot10^{-11}\,m^{3}kg^{-1}s^{-2}}{(299\,792\,458\,m/s)^{2}}\approx7.4259\cdot10^{-28}$
 \\
 \\
-To converte between time in seconds and meters we do like this:
+To converte from time in seconds to meters we do like this:
  
 \begin{equation}\label{eq:s_to_m}
 t_{s}\cdot c=t_{m}
@@ -137,7 +138,7 @@ Here $\Delta t_{\text{shell}}$ and $\Delta t$ is the time difference measured by
 \subsection*{Conservation laws}
 In lecture note 2C we are given the following consevation laws:
 \\
-Energy per mass
+\underline{Energy per mass}
 
 \begin{equation}\label{eq:E/m}
 \frac{E}{m}=\left(1-\frac{2M}{r}\right)\frac{dt}{d\tau}=\text{constant},
@@ -145,13 +146,13 @@ Energy per mass
 
 where $E$ and $m$ is the energy and mass of the object, $M$ is the mass of the central mass, $r$ is the Schwazscild radius, $dt$ the time difference measured by the far-away observer and $d\tau$ is the proper time of the object.
 
-Angular momentum per mass
+\underline{Angular momentum per mass}
 
 \begin{equation}\label{eq:L/m}
 \frac{L}{m}=r^{2}\frac{d\phi}{d\tau}=\gamma_{\text{shell}}rv_{\phi}=\text{constant},
 \end{equation}
 
-where $L$ is the angular momentum, $m$ is the mass of the object, $r$ is the Schwarzschild radius, $d\phi$ is the angular difference measured by the far-away observer, $d\tau$ is the proper time of the object, $\gamma_{\text{shell}}=\frac{1}{\sqrt{1-v_{\text{shell}}^{2}}}$ where $v_{\text{shell}}$ is the velocity of the object measured by a shell observer and $v_{\phi}$ is the angular velocity of the object measured by the far-away observer.
+where $L$ is the angular momentum, $m$ is the mass of the object, $r$ is the Schwarzschild radius, $d\phi$ is the angular difference measured by the far-away observer, $d\tau$ is the proper time of the object, $\gamma_{\text{shell}}=\frac{1}{\sqrt{1-v_{\text{shell}}^{2}}}$ where $v_{\text{shell}}$ is the velocity of the object measured by a shell observer and $v_{\phi}$ is the angular velocity of the object measured by the far-away observer.\textbf{Er dette sant?}
 
 \newpage
 
@@ -166,25 +167,31 @@ where $L$ is the angular momentum, $m$ is the mass of the object, $r$ is the Sch
 \section*{Exercise 2C.1}
 
 
-We are observing a laser with frequency $\nu_{\text{shell}}=1/\Delta t_\text{shell}$, measured by a shell observer at a distance $r$ from a central mass $M$, and $\nu^{\prime}=1/\Delta t^{\prime}$, measured by a far-away observer (when the laser reaches him). $\Delta t^{\prime}$ and $\Delta t_\text{shell}$ are the difference between two peaks of the electromagnetic wave of the laser.
+We are observing a laser with frequency $\nu_{\text{shell}}=1/\Delta t_\text{shell}$, measured by a shell observer at a distance $r$ from a central mass $M$, and $\nu=1/\Delta t$, measured by a far-away observer (when the laser reaches him). $\Delta t$ and $\Delta t_\text{shell}$ are the difference between two peaks of the electromagnetic wave of the laser.
 
 \begin{enumerate}
 
-\item We want to find the relation between the two time differences. In lecture note 2C we derived a relation between the time measured by a shell and far-away observer (equation \ref{eq:shell_time}). We derived this equation assuming $\Delta r=0$, $\Delta\phi=0$ and that the shell observer was in a local inertial frame so that $\Delta s^{2}=\Delta\tau^{2}=\Delta t_{\text{shell}}$. 
-%, which is valid for $\Delta r_{shell}\approx0$ and $\Delta \phi_\text{shell}=0$. 
-Since the distance between two peaks on an electromagnetic wave is very small (if we exclude radio waves), the wave is only moving in radial direction and we can think of an observer \textquote{on} the wave as a shell observer in a local inertial frame, we are allowed to use equation \ref{eq:shell_time} which gives us 
-
-\[\Delta t^{\prime}=\frac{\Delta t_{\text{shell}}}{\sqrt{1-\frac{2M}{r}}}\]
-
-\item We should now be able to show the gravitational ``Doppler" formula. We know that the relation between wave length and frequency is $\lambda=\frac{c}{\nu}=\frac{1}{\nu}$, since $c=1$ in our relativistic units (where $\lambda$ and $\nu$ is the wave length and frequency of an electromagnetic wave). Using that frequency is given by $\nu=\frac{1}{\Delta t}$, we get (remember that want to find an expression for $\frac{\Delta \lambda}{\lambda}$)
+\item We want to find the relation between the two time differences. In lecture note 2C we derived a relation between the time measured by a shell and far-away observer (equation \ref{eq:shell_time}). We derived this equation assuming $\Delta r=0$, $\Delta\phi=0$ and that the shell observer was in a local inertial frame. In other words $\Delta s^{2}=\Delta\tau^{2}=\Delta t_{\text{shell}}^{2}$. Since the shell observer does not move, we have $\Delta r=\Delta \phi=0$. Using that the far-away observer measures a time interval $\Delta t$ between two peaks on the electromagnetic wave passing the shell observer, we find 
+%Since the distance between two peaks on an electromagnetic wave is very small (if we exclude radio waves), the wave is only moving in radial direction and we can think of an observer \textquote{on} the wave as a shell observer in a local inertial frame, we are allowed to use equation \ref{eq:shell_time} which gives us 
 
 \begin{align*}
-\frac{\Delta \lambda}{\lambda_{\text{shell}}}&=\frac{\lambda^{\prime}-\lambda_{\text{shell}}}{\lambda_{\text{shell}}}=\frac{\lambda^{\prime}}{\lambda_{\text{shell}}}-1=\frac{1/\nu^{\prime}}{1/\nu_{\text{shell}}}-1\\
-&=\frac{\Delta t^{\prime}}{\Delta t_{\text{shell}}}-1=\frac{\Delta t_{\text{shell}}}{\sqrt{1-\frac{2M}{r}}}\frac{1}{\Delta t_{\text{shell}}}-1\\
+\Delta s_{\text{shell}}^{2}&=\Delta s^{2}\\
+\Delta\tau^{2}&=\left(1-\frac{2M}{r}\right)\Delta t^{2}-\frac{\overbrace{\Delta r^{2}}^{=0}}{1-\frac{2M}{r}}-r^{2}\overbrace{\Delta\phi^{2}}^{=0}\\
+\Delta t_{\text{shell}}&=\pm\sqrt{1-\frac{2M}{r}}\Delta t\\
+\Delta t&=\frac{\Delta t_{\text{shell}}}{\sqrt{1-\frac{2M}{r}}}
+\end{align*}
+
+\textbf{Forklar hvorfor ikke minus.}
+
+\item We should now be able to show the gravitational ``Doppler" formula. We know that the relation between wavelength and frequency is $\lambda=\frac{c}{\nu}=\frac{1}{\nu}$, since $c=1$ in our relativistic units (where $\lambda$ and $\nu$ is the wavelength and frequency of an electromagnetic wave respectively). Using that frequency is given by $\nu=\frac{1}{\Delta t}$, where $\Delta t$ is the time difference between two peaks on the electromagnetic wave, we get (remember that want to find an expression for $\frac{\Delta \lambda}{\lambda}$)
+
+\begin{align*}
+\frac{\Delta \lambda}{\lambda_{\text{shell}}}&=\frac{\lambda-\lambda_{\text{shell}}}{\lambda_{\text{shell}}}=\frac{\lambda}{\lambda_{\text{shell}}}-1=\frac{1/\nu}{1/\nu_{\text{shell}}}-1\\
+&=\frac{\Delta t}{\Delta t_{\text{shell}}}-1=\frac{\Delta t_{\text{shell}}}{\sqrt{1-\frac{2M}{r}}}\frac{1}{\Delta t_{\text{shell}}}-1\\
 &=\frac{1}{\sqrt{1-\frac{2M}{r}}}-1
 \end{align*}
 
-In the second line we use the relation we found above (equation\ref{eq:shell_time}).
+In the second line we use the relation we found above (equation \ref{eq:shell_time}).
   
 \item To show the relation $\frac{\Delta \lambda}{\lambda_{\text{shell}}}=\frac{M}{r}$ when $r\gg2M$, we will create a Taylor expansion. We define $f(x)=\frac{1}{\sqrt{1-x}}$. In other words, if we choose $x=\frac{2M}{r}$ we have
 
@@ -196,13 +203,13 @@ We start by finding the derivative.
 f^{\prime}(x)&=\left[(1-x)^{-1/2}\right]^{\prime}=\frac{-1}{2}(1-x)^{-3/2}(-1)=\frac{1}{2}(1-x)^{-3/2} &&\Rightarrow&& f^{\prime}(0)&=\frac{1}{2}
 \end{align*}  
 
-This means that we can write the first order Taylor expasion for $f(x)$ (this will be a good approximation for $r\gg 2M$.
+This means that we can write the first order Taylor expasion for $f(x)$ as
 
 \begin{equation*}
 \frac{1}{\sqrt{1-x}}=f(x)\approx T_{1}f(x)=f(0)+xf^{\prime}(0)=1+\frac{1}{2}x
 \end{equation*}
 
-Inserting our newfound Taylor expansion into the relativistic \textquote{Doppler} formula we find
+This will be a good approximation for $r\gg 2M$. Inserting our newfound Taylor expansion into the relativistic \textquote{Doppler} formula we find
 
 \begin{align*}
 \frac{\Delta \lambda}{\lambda_{\text{shell}}}&=\frac{1}{\sqrt{1-\frac{2M}{r}}}-1\approx T_{1}f(2M/r)-1=f(0)+\frac{2M}{r}f^{\prime}(0)-1=1+\frac{1}{2}\frac{2M}{r}-1\\
@@ -210,17 +217,19 @@ Inserting our newfound Taylor expansion into the relativistic \textquote{Doppler
 \end{align*}
 
 
-\item We will now study how the relativistic doppler formula acts on the light from the sun. We will assume that the wave length of the light from the sun is at maximum $\lambda_{\text{max}}=500\,nm$.
+\item We will now study how the relativistic doppler formula acts on the light from the Sun. We will assume that the wave length of the light from the Sun is at maximum $\lambda_{\text{max}}=500\,nm$.
 
 \begin{enumerate}
 
-\item First we need to find the mass of our sun in meters. Equation \ref{eq:kg_to_m} tells us how to converte from kilos to meters.
+\item First we need to find the mass of our Sun in meters. Equation \ref{eq:kg_to_m} tells us how to converte from kilos to meters.
 
 \[M_{m}=\frac{G}{c^{2}}M_{kg}=7.4259\cdot10^{-28}\,m/kg\cdot2\cdot10^{30}\,kg\approx1485.18\,m\]
 
-\item we can now find the ratio $M/r$ for the sun (the radius of the sun is listed under constants). 
+We can now find the ratio $M/r$ for the Sun (the radius of the Sun is listed under constants). 
 
 \[\frac{M}{r}\approx\frac{1485.18\,m}{695\,508\cdot10^{3}\,m}\approx2.1354\cdot10^{-6}\]
+
+This ratio is very small. Thus, we get $1-\frac{2M}{r}\approx1$, which can lead to no doppler shift at all numerically. It therefore might be a good idea to use a Taylor approximation.
 
 \item We now want to find the redshift measured by a far-away observer. Since $\frac{2M}{r}\ll 1$ we are allowed to use our Taylor expansion $\frac{\Delta \lambda}{\lambda}=\frac{M}{r}\approx2.1354\cdot10^{-6}$.
 \\
@@ -229,17 +238,17 @@ Alternatively we can use the full expression:
 \frac{\Delta \lambda}{\lambda}=\frac{1}{\sqrt{1-\frac{2M}{r}}}-1\approx\frac{1}{\sqrt{1-2\cdot2.1354\cdot10^{-6}}}-1\approx2.1354\cdot10^{-6}
 \end{equation*}
   
-\item The color of the sun observed by a far-away observer will be
+The color of the Sun observed by a far-away observer thus become
 
 \begin{align*}
-\frac{\Delta \lambda}{\lambda}&=\frac{\lambda^{\prime}-\lambda_{\text{shell}}}{\lambda_{\text{shell}}}=\frac{1}{\sqrt{1-\frac{2M}{r}}}-1\\
-\frac{\lambda^{\prime}}{\lambda_{\text{shell}}}&=\frac{1}{\sqrt{1-\frac{2M}{r}}}\\
-\lambda^{\prime}&=\frac{1}{\sqrt{1-\frac{2M}{r}}}\lambda_{\text{shell}}\approx\frac{1}{\sqrt{1-2\cdot2.1354\cdot10^{-6}}}\cdot500\cdot10^{-9}\,m\approx500.001\,nm
+\frac{\Delta \lambda}{\lambda}&=\frac{\lambda-\lambda_{\text{shell}}}{\lambda_{\text{shell}}}=\frac{1}{\sqrt{1-\frac{2M}{r}}}-1\\
+\frac{\lambda}{\lambda_{\text{shell}}}&=\frac{1}{\sqrt{1-\frac{2M}{r}}}\\
+\lambda&=\frac{1}{\sqrt{1-\frac{2M}{r}}}\lambda_{\text{shell}}\approx\frac{1}{\sqrt{1-2\cdot2.1354\cdot10^{-6}}}\cdot500\cdot10^{-9}\,m\approx500.001\,nm
 \end{align*}
 
-The apparent color of the sun will therefore not change.
+The apparent color of the Sun will therefore not change.
   
-\item We now want to study how light from a sun-like star is affected by the Earth's gravitational pull (the mass and radius of the Earth are listed under constants). We begin by finding Earth's mass in meters 
+\item We now want to study how light from a Sun-like star is affected by the Earth's gravitational pull (the mass and radius of the Earth are listed under constants). We begin by finding Earth's mass in meters 
 
 \[M_{m,\text{Earth}}=\frac{G}{c^{2}}M_{kg,\text{Earth}}\approx7.4259\cdot10^{-28}\,m/kg\cdot5.972\cdot10^{24}\,kg\approx4.4347\cdot10^{-3}\,m,\]
 
@@ -247,43 +256,45 @@ hence the mass to radius ratio becomes
 
 \[\frac{M}{r}\approx\frac{4.4347\cdot10^{-3}\,m}{6\,371\cdot10^{3}\,m}\approx6.9608\cdot10^{-10}\]
   
-\item We are now almost ready to find the Doppler shift caused by the Earth. Notice that we need to redefine who the far-away and shell observer is (the observer on Earth will be the shell observer and the one close to the sun will be the far-away observer). To be consistent, we will therefore switch the places in the Doppler formula (the ratio between the two wave lengths will be the same even if we do not switch the places).
+\item We are now almost ready to find the Doppler shift caused by the Earth. Notice that we need to redefine who the far-away and shell observer is (the observer on Earth will be the shell observer and the one close to the Sun will be the far-away observer). To be consistent, we will therefore switch the places in the Doppler formula (the ratio between the two wave lengths will be the same even if we do not switch the places).
 
 \begin{align*}
-\frac{\Delta \lambda}{\lambda^{\prime}}&=\frac{\lambda_{\text{shell}}-\lambda^{\prime}}{\lambda^{\prime}}=\frac{\Delta t_{\text{shell}}}{\Delta t^{\prime}}-1\\
-&=\frac{\Delta t_{\text{shell}}}{\Delta t_{\text{shell}}/\sqrt{1-\frac{2M}{r}}}-1=\sqrt{1-\frac{2M}{r}}-1\\
+\frac{\Delta \lambda}{\lambda}&=\frac{\lambda_{\text{shell}}-\lambda}{\lambda}=\frac{\Delta t_{\text{shell}}}{\Delta t}-1\\
+&=\frac{\Delta t_{\text{shell}}}{\frac{\Delta t_{\text{shell}}}{\sqrt{1-\frac{2M}{r}}}}-1=\sqrt{1-\frac{2M}{r}}-1\\
 &\approx\sqrt{1-2\cdot6.9608\cdot10^{-10}}-1\approx-6.9608\cdot10^-{10}
 \end{align*}
 
 Thus the observed wave length on earth is
 
 \begin{align*}
-\frac{\Delta \lambda}{\lambda^{\prime}}&=\frac{\lambda_{\text{shell}}}{\lambda^{\prime}}-1=\sqrt{1-\frac{2M}{r}}-1\\
-\lambda_{\text{shell}}&=\lambda^{\prime}\sqrt{1-\frac{2M}{r}}\approx500\,nm\cdot\sqrt{1-6.9608\cdot10^{-10}}\\
+\frac{\Delta \lambda}{\lambda}&=\frac{\lambda_{\text{shell}}}{\lambda}-1=\sqrt{1-\frac{2M}{r}}-1\\
+\lambda_{\text{shell}}&=\lambda\sqrt{1-\frac{2M}{r}}\approx500\,nm\cdot\sqrt{1-2\cdot|6.9608\cdot10^{-10}}\\
 &\approx500.000\,nm
 \end{align*}
   
 \end{enumerate}
 
-\item We are now looking at waves observed from a quasar and we want to find the distance $r$ in terms of $M$. The shell observer will be the observer close to the quasar and the far-away observer will be us on Earth. We are given $\lambda^{\prime}=600\,nm$ and $\lambda_{\text{shell}}=2150\,nm$. Rearranging the the relativistic Doppler formula and putting in numbers, we find:
+\item We are now looking at light observed from a quasar and we want to find at what distance $r$ from the central mass the light is emitted, in terms of $M$. The shell observer will be the observer close to the quasar and the far-away observer will be us on Earth. We are given $\lambda=600\,nm$ and $\lambda_{\text{shell}}=2150\,nm$. Rearranging the the gravitational Doppler formula and putting in numbers, we find:
 
 \begin{align*}
-\frac{\Delta \lambda}{\lambda_{\text{shell}}}&=\frac{\lambda^{\prime}}{\lambda_{\text{shell}}}-1=\frac{1}{\sqrt{1-\frac{2M}{r}}}-1\\
-1-\frac{2M}{r}&=\left(\frac{\lambda_{\text{shell}}}{\lambda^{\prime}}\right)^{2}\\
-\frac{2M}{r}&=1-\left(\frac{\lambda_{\text{shell}}}{\lambda^{\prime}}\right)^{2}\\
-r&=\frac{2M}{1-\left(\frac{\lambda_{\text{shell}}}{\lambda^{\prime}}\right)^{2}}\\
+\frac{\Delta \lambda}{\lambda_{\text{shell}}}&=\frac{\lambda}{\lambda_{\text{shell}}}-1=\frac{1}{\sqrt{1-\frac{2M}{r}}}-1\\
+1-\frac{2M}{r}&=\left(\frac{\lambda_{\text{shell}}}{\lambda}\right)^{2}\\
+\frac{2M}{r}&=1-\left(\frac{\lambda_{\text{shell}}}{\lambda}\right)^{2}\\
+r&=\frac{2M}{1-\left(\frac{\lambda_{\text{shell}}}{\lambda}\right)^{2}}\\
 r&=\frac{2}{1-\left(\frac{600\,nm}{2150\,nm}\right)^{2}}M\approx2.1689M
 \end{align*}
 
-We know from lecture note 2C that the Schwarzschild radius of a black hole is located at $r=2M$. Since the light we measure is is emitted at a distance $r\approx2M$, it would make sence that there is a black hole at the center of the quasar (light closer to the black hole then $r=2M$ will just fall into it).
+We know from lecture note 2C that the Schwarzschild radius of a black hole is located at $r=2M$. Since the light we measure is is emitted at a distance $r\approx2M$, it would make sence that there is a black hole at the center of the quasar (light closer to the black hole then $r=2M$ will just \textquote{fall} into it).
 
-\item We are now situated at $r=2.01M$ as a shell observer around a black hole with mass $M$. We want to find the Doppler shift from the stars around us. The Doppler formula gives us
+\item We are now situated at $r=2.01M$ as a shell observer around a black hole with mass $M$. We want to find the Doppler shift from the stars around us. The gravitational Doppler formula gives us
 
 \begin{align*}
-\frac{\Delta \lambda}{\lambda^{\prime}}&=\frac{\lambda_{\text{shell}}}{\lambda^{\prime}}-1=\sqrt{1-\frac{2M}{r}}-1\\
-\lambda_{\text{shell}}&=\lambda^{\prime}\sqrt{1-\frac{2M}{r}}=\lambda^{\prime}\sqrt{1-\frac{2M}{2.01M}}\approx0.0705\lambda^{\prime}
+\frac{\Delta \lambda}{\lambda}&=\frac{\lambda_{\text{shell}}}{\lambda}-1=\sqrt{1-\frac{2M}{r}}-1\\
+\lambda_{\text{shell}}&=\lambda\sqrt{1-\frac{2M}{r}}=\lambda\sqrt{1-\frac{2M}{2.01M}}\approx0.0705\lambda
 \end{align*}
 
+If we assume $\lambda=500\,nm$ as before, we find 
+\[\lambda_{\text{shell}}\approx0.0705\cdot500\cdot10^{-9}\,m\approx35.25\cdot10^{-11}\,m\]
 This means that we would need a telescope that can observe x-rays to look at the different stars.
 
 \end{enumerate}
@@ -765,7 +776,21 @@ We define the two following vectors: a satellite's position with respect to the 
 \end{align*}
 
 where $x_{\text{sat}}$ and $x$ is the $x$-position of the satellite and us respectively, and $y_{\text{sat}}$ and $y$ is the $y$-position of the satellite and us respectively. The satellites' positions are known, but only the length of our position vector is known, $|\textbf{r}|=r_{\text{Earth}}$. Hence we need some trigonometric properties to find our position.
-\\
+
+\begin{figure}[ht]
+\centering
+\scalebox{1.5}{
+\begin{tikzpicture}[decoration = {snake,pre length=0pt,post length=0pt,amplitude=0.4mm,segment length=2}]
+\draw (0,0) -- (60:4cm) node [pos=0.5,left] {A};
+\draw (0,0) -- (10:5cm) node [pos=0.5,below] {B};
+\draw (10:5) -- (60:4) node [pos=0.5,right] {C};
+\draw[variable=\x, domain=10:60, smooth, samples=60] plot (\x:0.8);
+\draw node at (35:1.0) {\(\alpha\)};
+\end{tikzpicture}}
+\caption{Law of cosine}
+\label{fig:cos}
+\end{figure}
+
 If we knew the angles $\alpha$ and $\theta$ in figure \ref{fig:GPS}, it would be easy to find our position. You should remember from the law of cosine from highschool (which is valid for any triangle):
 
 \begin{equation}

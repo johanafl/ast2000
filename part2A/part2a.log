@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.7.31)  2 AUG 2018 11:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.7.31)  14 AUG 2018 17:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -885,49 +885,45 @@ Package: listings 2015/06/04 1.6 (Carsten Heinz)
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
-\c@subproject=\count133
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
- (./part2a.aux
-
-LaTeX Warning: Label `tabel:ex_2A_8_2' multiply defined.
-
-)
+ (./part2a.aux)
 \openout1 = `part2a.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 66.
-LaTeX Font Info:    ... okay on input line 66.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 66.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 66.
- (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 68.
+LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 68.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 68.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 66.
+LaTeX Font Info:    ... okay on input line 68.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count134
+\scratchcounter=\count133
 \scratchdimen=\dimen132
 \scratchbox=\box33
-\nofMPsegments=\count135
-\nofMParguments=\count136
+\nofMPsegments=\count134
+\nofMParguments=\count135
 \everyMPshowfont=\toks31
-\MPscratchCnt=\count137
+\MPscratchCnt=\count136
 \MPscratchDim=\dimen133
-\MPnumerator=\count138
-\makeMPintoPDFobject=\count139
+\MPnumerator=\count137
+\makeMPintoPDFobject=\count138
 \everyMPtoPDFconversion=\toks32
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -981,32 +977,32 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box34
-Package hyperref Info: Link coloring ON on input line 66.
+Package hyperref Info: Link coloring ON on input line 68.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count140
+\c@section@level=\count139
 LaTeX Info: Redefining \Ref on input line 515.
 )
-LaTeX Info: Redefining \ref on input line 66.
-LaTeX Info: Redefining \pageref on input line 66.
-LaTeX Info: Redefining \nameref on input line 66.
+LaTeX Info: Redefining \ref on input line 68.
+LaTeX Info: Redefining \pageref on input line 68.
+LaTeX Info: Redefining \nameref on input line 68.
 
 (./part2a.out) (./part2a.out)
 \@outlinefile=\write5
 \openout5 = `part2a.out'.
 
-LaTeX Info: Redefining \Ref on input line 66.
-\c@lstlisting=\count141
-LaTeX Font Info:    Try loading font information for U+msa on input line 71.
+LaTeX Info: Redefining \Ref on input line 68.
+\c@lstlisting=\count140
+LaTeX Font Info:    Try loading font information for U+msa on input line 73.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 71.
+LaTeX Font Info:    Try loading font information for U+msb on input line 73.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1023,12 +1019,7 @@ LaTeX Warning: No \author given.
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 149--150
+Underfull \hbox (badness 10000) in paragraph at lines 145--146
 
  []
 
@@ -1037,14 +1028,14 @@ le.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.275 \end{align*}
-                  ] [6] [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 362--364
+l.263 \end{align*}
+                  ] [6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 352--354
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--366
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 354--356
 
  []
 
@@ -1053,9 +1044,9 @@ as been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.398 ...eft_laser}x_{Lb}=c\cdot t=t\end{equation}
-                                                  ] [10]
-Overfull \hbox (14.38155pt too wide) detected at line 465
+l.392 \end{align*}
+                  ] [10]
+Overfull \hbox (14.38155pt too wide) detected at line 456
 \OML/cmm/m/it/10 t[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 t[] \OT1/cmr/m/n/10 
 = [] \OMS/cmsy/m/n/10 ^^@ [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 L [] \OMS/cmsy/
 m/n/10 ^^@ \OML/cmm/m/it/10 ^^Mt[] \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10 ^^@ \O
@@ -1063,7 +1054,7 @@ ML/cmm/m/it/10 ^^Mt[]
  []
 
 
-Overfull \hbox (78.32835pt too wide) detected at line 469
+Overfull \hbox (78.32835pt too wide) detected at line 460
 \OML/cmm/m/it/10 x[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 x[] \OT1/cmr/m/n/10 
 = [] \OMS/cmsy/m/n/10 ^^@ [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 L [] \OMS/cmsy/
 m/n/10 ^^@ \OML/cmm/m/it/10 v^^Mt[] \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10 ^^@ \
@@ -1071,39 +1062,67 @@ OML/cmm/m/it/10 v^^Mt[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 v\OT1/cmr/m/n/10 ^^A
 \OML/cmm/m/it/10 t[]
  []
 
-[11] [12] [13] [14pdfTeX warning (ext4): destination with the same identifier (
-name{table.3}) has been already used, duplicate ignored
+[11] [12] [13] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 581--586
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 589--593
+
+ []
+
+[15] [16pdfTeX warning (ext4): destination with the same identifier (name{table
+.3}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.593 
-      ] [15]
-Overfull \hbox (40.8379pt too wide) detected at line 653
+l.651 \end{align*}
+                  ] [17] [18pdfTeX warning (ext4): destination with the same id
+entifier (name{table.4}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.733 \end{align}
+                 ]
+Overfull \hbox (40.8379pt too wide) detected at line 762
 []
- []
-
-
-Overfull \hbox (90.17337pt too wide) detected at line 679
-[]
- []
-
-[16] [17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 790--793
-
  []
 
 [19]
-Underfull \hbox (badness 10000) in paragraph at lines 814--817
+Overfull \hbox (90.17337pt too wide) detected at line 788
+[]
+ []
+
+[20] [21] [22pdfTeX warning (ext4): destination with the same identifier (name{
+table.5}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.905 \]
+        ]
+Overfull \hbox (3.4374pt too wide) detected at line 910
+\OML/cmm/m/it/10 ^^M\OT1/cmr/m/n/10 (1 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 v\
+OT1/cmr/m/n/10 ) = [] = [] = [] = [] = [] = []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 950--955
+
+ []
+
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 979--982
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 818--821
+Underfull \hbox (badness 10000) in paragraph at lines 983--986
 
  []
 
-
-Overfull \hbox (84.74759pt too wide) detected at line 837
+[24]
+Overfull \hbox (62.74759pt too wide) detected at line 1006
 \OML/cmm/m/it/10 t[] \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 v^^
 Mx[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 ^^Mt[] \OT1/cmr/m/n/10 = []\OML/cmm/m/i
 t/10 x[] \OT1/cmr/m/n/10 + []\OML/cmm/m/it/10 t[] \OT1/cmr/m/n/10 = [] \OMS/cms
@@ -1112,13 +1131,13 @@ y/m/n/10 ^^A \OT1/cmr/m/n/10 200 [] + [] \OMS/cmsy/m/n/10 ^^A \OT1/cmr/m/n/10 (
 \OMS/cmsy/m/n/10 ^^Y \OT1/cmr/m/n/10 28\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 5 []
  []
 
-[20]
-Underfull \hbox (badness 10000) in paragraph at lines 845--848
+
+Underfull \hbox (badness 10000) in paragraph at lines 1011--1015
 
  []
 
 
-Overfull \hbox (49.14177pt too wide) detected at line 863
+Overfull \hbox (27.14177pt too wide) detected at line 1030
 \OML/cmm/m/it/10 t[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 ^^Mvx[] \OT1/cmr/m/n/10
  + \OML/cmm/m/it/10 ^^Mt[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 ^^Mv [] \OT1/cmr/
 m/n/10 + \OML/cmm/m/it/10 ^^M[] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 L[]=v \OMS/c
@@ -1128,151 +1147,39 @@ T1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 99 \OMS/cmsy/m/n/10 ^^A \OT1/c
 mr/m/n/10 200 [] \OMS/cmsy/m/n/10 ^^Y \OT1/cmr/m/n/10 4 []
  []
 
-[21] [22pdfTeX warning (ext4): destination with the same identifier (name{table
-.4}) has been already used, duplicate ignored
+[25] [26pdfTeX warning (ext4): destination with the same identifier (name{table
+.6}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.926 
-      ] [23pdfTeX warning (ext4): destination with the same identifier (name{ta
-ble.5}) has been already used, duplicate ignored
+l.1085 \end{align*}
+                   ] [27pdfTeX warning (ext4): destination with the same identi
+fier (name{table.7}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.971 \begin{align*}
-                    ]
-Underfull \hbox (badness 10000) in paragraph at lines 1000--1003
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1000--1003
-
- []
-
-[24]
-Overfull \hbox (22.33664pt too wide) detected at line 1040
-[]
- []
-
-[25pdfTeX warning (ext4): destination with the same identifier (name{table.6}) 
-has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1054 \end{align*}
+l.1124 \end{align*}
                    ]
-Underfull \hbox (badness 10000) in paragraph at lines 1056--1062
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1056--1062
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1056--1062
-
- []
-
-[26] [27] [28pdfTeX warning (ext4): destination with the same identifier (name{
-table.7}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.1152 \end{align*}
-                   ]
-Overfull \hbox (9.8845pt too wide) in paragraph at lines 1156--1156
-[]\OT1/cmr/m/n/10 We now know that the space-ship deac-cel-er-ates with con-sta
-nt ac-cel-er-a-tion $\OML/cmm/m/it/10 g \OT1/cmr/m/n/10 = \OMS/cmsy/m/n/10 ^^@\
-OT1/cmr/m/n/10 0\OML/cmm/m/it/10 :\OT1/cmr/m/n/10 1 \OML/cmm/m/it/10 m=s[]$\OT1
-/cmr/m/n/10 .
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1156--1160
-
- []
-
-
-Overfull \hbox (58.52893pt too wide) detected at line 1170
-[]
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1170--1174
-
- []
-
-[29]
-<part8_n.png, id=365, 642.4pt x 481.8pt>
-File: part8_n.png Graphic file (type png)
-<use part8_n.png>
-Package pdftex.def Info: part8_n.png  used on input line 1183.
-(pdftex.def)             Requested size: 334.60422pt x 250.95648pt.
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 1190.
- (./del8.py [30pdfTeX warning (ext4): destination with the same identifier (nam
-e{figure.1}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.14     for 
-             i in range(N1+1): <./part8_n.png>])
-Underfull \hbox (badness 10000) in paragraph at lines 1204--1207
-
- []
-
-[31]
-Underfull \hbox (badness 10000) in paragraph at lines 1231--1237
-
- []
-
-[32]
-Overfull \hbox (60.08337pt too wide) detected at line 1262
-[]
- []
-
-
-Overfull \hbox (20.02295pt too wide) detected at line 1269
-[]
- []
-
-[33]
-Underfull \hbox (badness 10000) in paragraph at lines 1284--1289
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1302--1306
-
- []
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1309.
-[34]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1309.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1158.
+ [28]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1158.
  (./part2a.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1309.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1309.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1158.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1158.
 
 Package rerunfilecheck Info: File `part2a.out' has not changed.
-(rerunfilecheck)             Checksum: C2D4B1843407FACF3B0D8813C659501F;338.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1309.
+(rerunfilecheck)             Checksum: 1621CF71A86877A5911CD772BA4D21AE;430.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1158.
  ) 
 Here is how much of TeX's memory you used:
- 11290 strings out of 494880
- 157856 string characters out of 6179601
- 396843 words of memory out of 5000000
- 14200 multiletter control sequences out of 15000+600000
- 12356 words of font info for 48 fonts, out of 8000000 for 9000
+ 10770 strings out of 494880
+ 153182 string characters out of 6179601
+ 300843 words of memory out of 5000000
+ 13751 multiletter control sequences out of 15000+600000
+ 11838 words of font info for 46 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 41i,18n,40p,1349b,2165s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/jaf/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm0700.600pk
+ 41i,16n,40p,1334b,564s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/jaf/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texli
@@ -1284,13 +1191,11 @@ ublic/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
 msfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy1
 0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
-Output written on part2a.pdf (34 pages, 311615 bytes).
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on part2a.pdf (28 pages, 232858 bytes).
 PDF statistics:
- 556 PDF objects out of 1000 (max. 8388607)
- 495 compressed objects within 5 object streams
- 233 named destinations out of 1000 (max. 500000)
- 62 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 440 PDF objects out of 1000 (max. 8388607)
+ 389 compressed objects within 4 object streams
+ 168 named destinations out of 1000 (max. 500000)
+ 73 words of extra memory for PDF output out of 10000 (max. 10000000)
 

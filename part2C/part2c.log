@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.7.31)  3 AUG 2018 12:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.7.31)  6 AUG 2018 15:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1307,19 +1307,12 @@ LaTeX Warning: No \author given.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 88--94
+Underfull \hbox (badness 10000) in paragraph at lines 88--95
 
  []
 
 
-Overfull \hbox (1.17743pt too wide) in paragraph at lines 99--100
-[]\OT1/cmr/m/n/10 where $^^A\OML/cmm/m/it/10 x$ \OT1/cmr/m/n/10 is the dif-fer-
-ence in $\OML/cmm/m/it/10 x$\OT1/cmr/m/n/10 -position and all other vari-ables 
-are the same as in the Schwarzschild
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 110--115
+Underfull \hbox (badness 10000) in paragraph at lines 111--116
 
  []
 
@@ -1330,50 +1323,50 @@ fier (name{table.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.376 
+l.383 
       ]
-Overfull \hbox (3.52373pt too wide) detected at line 387
+Overfull \hbox (3.52373pt too wide) detected at line 398
 []
  []
 
 
-Overfull \hbox (43.67319pt too wide) detected at line 400
+Overfull \hbox (43.67319pt too wide) detected at line 411
 []
  []
 
 [9] [10] [11] [12]
-Overfull \hbox (12.74693pt too wide) in paragraph at lines 564--565
+Overfull \hbox (12.74693pt too wide) in paragraph at lines 575--576
 \OT1/cmr/m/n/10 In this ex-er-cise we will find re-la-tions be-tween proper tim
 e and the main vari-ables in the Schwarzschild
  []
 
 [13] [14]
-Underfull \hbox (badness 10000) in paragraph at lines 619--626
+Underfull \hbox (badness 10000) in paragraph at lines 630--637
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 619--626
+Underfull \hbox (badness 10000) in paragraph at lines 630--637
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 619--626
+Underfull \hbox (badness 10000) in paragraph at lines 630--637
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 619--626
+Underfull \hbox (badness 10000) in paragraph at lines 630--637
 
  []
 
 [15]
-Overfull \hbox (29.9849pt too wide) detected at line 672
+Overfull \hbox (29.9849pt too wide) detected at line 683
 []
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 706--710
+Underfull \hbox (badness 10000) in paragraph at lines 717--721
 
  []
 
@@ -1382,22 +1375,28 @@ e.1}) has been already used, duplicate ignored
 
 \AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
                                                   \fi \fi 
-l.788 \end{align*}
-                  ] [19]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 832.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 832.
+l.813 \end{align*}
+                  ] [19pdfTeX warning (ext4): destination with the same identif
+ier (name{figure.2}) has been already used, duplicate ignored
+
+\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
+                                                  \fi \fi 
+l.842 \end{align*}
+                  ] [20]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 857.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 857.
  (./part2c.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 832.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 832.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 857.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 857.
 Package rerunfilecheck Info: File `part2c.out' has not changed.
-(rerunfilecheck)             Checksum: E3AE96ACE3273B98C9ADD0D2AB3F2E85;439.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 832.
+(rerunfilecheck)             Checksum: 843FAA12AABC12385B7F6AE3CCD3B70C;439.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 857.
  ) 
 Here is how much of TeX's memory you used:
- 21495 strings out of 494880
- 397448 string characters out of 6179601
- 513513 words of memory out of 5000000
- 24322 multiletter control sequences out of 15000+600000
+ 21561 strings out of 494880
+ 398917 string characters out of 6179601
+ 513552 words of memory out of 5000000
+ 24388 multiletter control sequences out of 15000+600000
  12457 words of font info for 48 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  55i,18n,65p,911b,874s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1414,12 +1413,11 @@ msfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on part2c.pdf (19 pages, 247925 bytes).
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on part2c.pdf (20 pages, 244252 bytes).
 PDF statistics:
- 322 PDF objects out of 1000 (max. 8388607)
- 282 compressed objects within 3 object streams
+ 320 PDF objects out of 1000 (max. 8388607)
+ 280 compressed objects within 3 object streams
  99 named destinations out of 1000 (max. 500000)
  85 words of extra memory for PDF output out of 10000 (max. 10000000)
 
